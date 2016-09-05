@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+
+<title></title>
+
+<meta charset='UTF-8' />
+
+<meta name='description' content='' />
+
+<meta name='keyword' content='' />
+
+<meta name='robots' content='index, follow' />
+
+</head>
+
+<body>
+
+<script>
+'use strict';
+
+let xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = 
+
+    function() {
+    
+        if( xhr.readyState == 4 && xhr.status == 200) {
+        
+            myFunction( xhr);
+        }
+    }
+;
+
+xhr.open("GET", "test.html", true);
+xhr.send();
+
+function myFunction( xhr) {
+    
+    console.log( xhr.responseXML)
+}
+
+/*    
+window.fetch("https://meteor-mdajobs.c9users.io/gb/html/app/test.html")
+    
+    .then( 
+    
+        function( response) {
+            
+            console.log( response.type);
+        }
+    )
+    
+    .then(
+        
+        function( data) {
+  
+            // console.log( data);
+        }
+    )
+    
+    .catch(
+        
+        function() {
+  
+            console.log("Booo");
+        }
+    )
+;
+*/
+
+</script>
+
+</body>
+
+<script>
+
+    
+</script>  
+
+</html>

@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>HTTP 1.1</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Syntax Highligher v. 3.08 [file:///E:/Javascript/Library/Syntax%20Highlighters/SyntaxHighlighter/Version/3.0.83/syntaxhighlighter_3.0.83/index.html] -->
+<link type="text/css" rel="stylesheet" href="file:///E:/Javascript/Library/Syntax%20Highlighters/SyntaxHighlighter/Version/3.0.83/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+<script type="text/javascript" src="file:///E:/Javascript/Library/Syntax%20Highlighters/SyntaxHighlighter/Version/3.0.83/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="file:///E:/Javascript/Library/Syntax%20Highlighters/SyntaxHighlighter/Version/3.0.83/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+</head>
+
+<body>
+
+<h1 class='title'><a href='#Hypertext_Transfer_Protocol'>Hypertext Transfer Protocol (HTTP)</a></h1>
+
+<div id='index'>
+
+  <a href='#index_A'>A</a>
+  <a href='#index_B'>B</a>
+  <a href='#index_C'>C</a>
+  <a href='#index_D'>D</a>
+  <a href='#index_E'>E</a>
+  <a href='#index_F'>F</a>
+  <a href='#index_G'>G</a>
+  <a href='#index_H'>H</a>
+  <a href='#index_I'>I</a>
+  <a href='#index_J'>J</a>
+  <a href='#index_K'>K</a>
+  <a href='#index_L'>L</a>
+  <a href='#index_M'>M</a>
+  <a href='#index_N'>N</a>
+  <a href='#index_O'>O</a>
+  <a href='#index_P'>P</a>
+  <a href='#index_Q'>Q</a>
+  <a href='#index_R'>R</a>
+  <a href='#index_S'>S</a>
+  <a href='#index_T'>T</a>
+  <a href='#index_U'>U</a>
+  <a href='#index_V'>V</a>
+  <a href='#index_W'>W</a>
+  <a href='#index_X'>X</a>
+  <a href='#index_Y'>Y</a>
+  <a href='#index_Z'>Z</a>
+
+</div>
+
+<h3 id='index_Symbols'>Symbols</h3>
+
+<!-- Printable ASCII Characters in numerical order 
+
+     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+
+-->
+
+<!-- Printable ASCII Characters in numerical order with Alpha Numberic characters removed
+
+     !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+
+-->
+
+<dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_A'>A</h3>
+
+<dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_B'>B</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_C'>C</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='Content-Type'>Content-Type <span class='unbold'>  header</span><span id=''/></dt>
+    <dd>
+      <p>
+        The Content-Type entity-header field indicates the media type of the <a href='#entity-body'>entity-body</a> sent to the recipient or, in the case of the <a href='#HEAD'>HEAD</a> method, the media type that would have been sent had the request been a GET.
+      </p>
+<pre class="brush: js;">
+
+</pre>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html'>14 Header Field Definitions</a>&mdash;14.17 Content-Type
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_D'>D</h3>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_E'>E</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_F'>F</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_G'>G</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_H'>H</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='Hypertext_Transfer_Protocol'> <span class='unbold'> HTTP</span><span id='HTTP' /><span class='unbold float-rt'></span></dt>
+    <dd>
+      <p>
+        
+      </p>
+    
+      <hr/>
+    
+      <footer>
+        <p class='source'>
+          <a href=''></a>&mdash;
+        </p>
+        <div class='sources'>
+          <ul>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+          </ul>
+        </div>          
+        <p class='cf'>
+          <a href='#'></a>
+        </p>
+        <p class='see'>
+          <a href='#'></a>
+        </p>
+        <p class='see-also'>
+          <a href='#'></a>
+        </p>
+        <div class='see-also'>
+          <ul>
+            <li><a href=''></a></li>
+            <li><a href=''></a></li>
+          </ul>
+        </div>          
+        <p class='reference'>
+          <a href=''></a>&mdash;
+        </p>
+        <div class='reference'>
+          <ul>
+            <li><a href='https://en.wikipedia.org/wiki/List_of_HTTP_header_fields'>List of HTTP header fields</a>&mdash;Wikiped</li>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+          </ul>
+        </div>
+      </footer>
+    </dd>
+
+    <dt id='HTTP_referer'>HTTP referer <span class='unbold'> field</span><span id='' /><span class='unbold float-rt'>HTTP header</span></dt>
+    <dd>
+      <p>
+        The <i>HTTP referer</i> is the HTTP header field that specifies the address of the previous web page from which a link to the currently requested page was followed. (The word “referrer” has been misspelled in the RFC as well as in most implementations to the point that it has become standard usage and is considered correct terminology) By checking the referrer, the new webpage can see where the request originated.</p>
+      <p>
+        In the most common situation this means that when a user clicks a hyperlink in a web browser, the browser sends a request to the server holding the destination webpage. The request includes the referrer field, which indicates the last page the user was on (the one where they clicked the link).</p>
+      <p>
+        Referer logging is used to allow websites and web servers to identify where people are visiting them from, for promotional or statistical purposes.</p>
+      </p>
+    
+      <hr/>
+    
+      <footer>
+        <p class='source'>
+          <a href='https://en.wikipedia.org/wiki/HTTP_referer'>HTTP referer</a>&mdash;Wikipedia
+        </p>
+        <p class='see-also'>
+          <a href='./html_glossary.html#referrer_policy'>referrer policy</a>
+        </p>
+      </footer>
+    </dd>
+
+  </dl>
+
+<h3 id='index_I'>I</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_J'>J</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_K'>K</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_L'>L</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_M'>M</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_N'>N</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_O'>O</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_P'>P</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_Q'>Q</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_R'>R</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_S'>S</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_T'>T</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_U'>U</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_V'>V</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_W'>W</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_X'>X</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_Y'>Y</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_Z'>Z</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<br/>
+
+<h2 id='xs_resources'>Resources</h2>
+<ul>
+  <li><a href='http://www.w3.org/XML/Schema#usage'>Applications</a>
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Best Practices
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Books
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Editors
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Formatters/Viewers
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Glossaries
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li><a href='http://www.w3.org/XML/Schema#usage'>Presentations, guides, and tutorials</a>
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Portals
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li><a href='http://www.w3.org/XML/Schema#dev'>Specifications and Development</a></li>
+  <li><a href='http://www.w3.org/XML/Schema#dev'>Submissions</a></li>
+  <li><a href='http://www.w3.org/XML/Schema#Tools'>Tools</a></li>
+  <li>Tutorials
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>XML Schema Reference
+    <ul>
+      <li><a href='https://www.evolveum.com/downloads/midpoint/1.9/midpoint-xsddocs-1.9/schemas/XMLSchema_xsd/'>www.evolveum.com</a>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</body>
+
+</html>

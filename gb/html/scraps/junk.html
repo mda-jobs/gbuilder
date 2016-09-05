@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html lang='en'>
+
+<head>
+
+  <title>getElementById</title>
+
+  <meta charset='UTF-8' />
+
+  <meta name='description' content='' />
+
+  <meta name='keyword' content='' />
+
+  <meta name='robots' content='index, follow' />
+
+  <script>
+  
+    var options = ["innerHTML", "outerHTML", "innerText", "outerText", "textContent"];
+    
+  </script>
+
+</head>
+
+<body>
+
+  <p>
+      The <code>getElementByTagName</code> method returns a <code>NodeList</code> of all elements in the document with the specified element name, in the order in which they would be encountered in a preorder traversal of the Element tree.</p>
+  <p>
+      For example, this HTML page contains several paragraph elements within the body element. The following code will produce a node list of every <code>p</code> element in the page:
+  </p> 
+<pre>
+var nl = document.getElementsByTagName("p");    
+</pre>
+  <p>
+    A nodelist has a length property that can be queried to determine the number of nodes returned by the method as follows:
+  </p>
+<pre>
+  console.log( nl.length);
+</pre>
+  <p>
+    Each node returned in the previous call can be accessed or visited by traversing the list as follows:
+  </p>
+<pre>
+  for( var i = 0; i < nl.length; i++) {console.log( nl[i]);)
+</pre>
+  <p>
+    The content (markup and text) of each node can be accessed using the innerHTML property as follows:
+  </p>
+<pre>
+  for( var i = 0, i < nl.length; i++) {console.log( nl[i].innerHTML);)  
+</pre>
+
+  <h2>Output</h2>
+
+  <textarea id='out'>
+          
+  </textarea>
+  
+  <script>
+  
+    var d = document;
+    
+    var nl = document.getElementsByTagName("p");
+    
+    var output = d.getElementById("out");
+    
+    console.log(nl.length);
+
+    console.log(nl[0]);
+
+    for( var i = 0; i < nl.length; i++) {
+
+        console.log("p" + i + " innerHTML: ");
+        console.log( nl[i].innerHTML);
+        console.log("");
+    }
+
+
+    console.log("*****************************************************************************************");
+
+    var result = ""
+
+    for( var i = 0; i < nl.length; i++) {
+
+        result += nl[i].innerText + "\n\n"
+
+        console.log("p" + i + " innerText: ");
+        console.log( nl[i].innerText);
+        console.log( typeof nl[i].innerText);
+        console.log("");
+    }
+
+    document.getElementById("out").innerHTML = result;
+
+    console.log("*****************************************************************************************");
+
+    for( var i = 0; i < nl.length; i++) {
+
+        console.log("p" + i + " textContent: ");
+        console.log( nl[i].textContent);
+        console.log("");
+    }
+
+    console.log("*****************************************************************************************");
+
+
+    for( var i = 0; i < nl.length; i++) {
+
+        
+
+        console.log("p" + i + " outerText: ");
+        console.log( nl[i].outerText);
+        console.log("");
+    }
+
+    console.log("*****************************************************************************************");
+
+    for( var i = 0; i < nl.length; i++) {
+
+        console.log("p" + i + " outerHTML: ");
+        console.log( nl[i].outerHTML);
+        console.log("");
+    }
+    
+  </script>
+  
+</body>
+
+</html>

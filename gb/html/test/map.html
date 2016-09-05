@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+
+<title></title>
+
+<meta charset='UTF-8' />
+
+<meta name='description' content='' />
+
+<meta name='keyword' content='' />
+
+<meta name='robots' content='index, follow' />
+
+<script src='../../js/models/mongoDb32-dm.js'></script>
+
+</head>
+
+<body>
+
+<script>
+
+
+var map = new Map([ [1, "Nicholas"], [2, "Author"]]);
+
+console.log(map.has(1));   // true
+console.log(map.get(1));   // "Nicholas"
+console.log(map.has(2));  // true
+console.log(map.get(2));  // "Author"
+console.log(map.size);        // 2
+
+for( let o in mongoDb32.schema) console.log(o);
+var l = mongoDb32.keywords.length
+console.log( mongoDb32.keywords.charAt(l -1));
+
+</script>
+
+</body>
+
+<script>
+
+    
+</script>  
+
+</html>

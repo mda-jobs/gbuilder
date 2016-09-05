@@ -1,0 +1,466 @@
+media="screen, projection, print"
+@media screen, projection, print
+h1, h2, h4, p, form, label, ul, ol, dl, fieldset, address {
+margin: 20px 0;
+}
+
+a {
+
+    text-decoration : none;
+    color: #3b5998;
+}
+
+a:hover {
+
+    text-decoration: underline
+}
+
+.attributes::before {
+
+    content: "Attributes: ";
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.attributes {
+
+    font-family: monospace;
+    padding: 10px;
+    background-color: #ffe5b4;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}
+
+body {
+  padding: 2em 5em 2em 70px;
+  font-family: small Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #333;
+  background: white;
+  background-position: top left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.cf::before {
+
+    content: "cf: ";
+    font-style: italic;
+}
+
+
+/*code {
+
+   font-size: 1.2em;
+   font-family: monospace;
+}*/
+
+li code {
+
+    font-family: monospace, Courier; color: black; 
+    border: 1px solid rgb(221, 221, 221); 
+    border-radius: 2px; padding: 1px 4px; 
+    white-space: nowrap; 
+    background-color: rgb(249, 249, 249);
+}
+
+p code {
+
+    font-family: monospace, Courier; color: black; 
+    border: 1px solid rgb(221, 221, 221); 
+    border-radius: 2px; padding: 1px 4px; 
+    white-space: nowrap; 
+    background-color: rgb(249, 249, 249);
+}
+
+
+
+p.note code {
+
+    font-family: monospace, Courier; color: black; 
+    background-color: transparent;
+}
+
+p.warning code {
+
+    font-family: monospace, Courier; color: black; 
+    background-color: transparent;
+}
+
+div.warning code {
+
+    font-family: monospace, Courier; color: black; 
+    background-color: transparent;
+}
+
+
+
+
+
+.color-red {
+
+    color: red;
+}
+
+.content::before {
+
+    content: "Content: ";
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.content {
+
+    font-family: monospace;
+    padding: 10px;
+    background-color: #b4ffe5;
+    border-radius: 10px;
+    
+}
+
+.declaration {
+
+    background-color: #C9E9FA;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.definition {
+
+    background-color: #cdebf9;
+    padding: 1em;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}
+
+div a {
+
+    font-weight: 500;
+}
+
+div.notes h4 {
+
+    color: #005A9C; 
+    background-color: #EFE0B9;
+}
+
+div p, q {
+
+    margin: 1em; 
+    line-height: 140%;
+    display: block;
+} 
+
+div pre {
+
+    margin: 1em; 
+}
+
+  
+
+dt {
+
+    font-weight: bold;
+    color: #551A8B;
+    font-size: 1.1em;
+}
+
+dl dt:nth-child(1n+2) {
+
+    padding-top: 20px;
+}
+
+.float-rt {
+
+    float: right;
+}
+
+.example {
+
+    font-family: monospace;
+    background-color: #d5d2cf;
+    padding: 1em;
+    border-radius: 10px;
+}    
+
+
+h1, h2, h3, h4, h5, h6 { 
+
+    text-align: left 
+}
+
+/* background should be transparent, but WebTV has a bug */
+h1, h2, h3, h4 { 
+
+    color: #005A9C; background: white 
+}
+
+h1 { 
+
+    font: 170% sans-serif 
+}
+
+h2 { 
+
+    font: 140% sans-serif 
+}
+ 
+h3 { 
+
+    font: 120% sans-serif 
+}
+
+h4 { 
+
+    font: bold 100% sans-serif 
+}
+
+h5 { 
+
+    font: italic 100% sans-serif 
+}
+
+h6 { 
+
+    font: small-caps 100% sans-serif 
+}
+
+h1.title {
+
+    padding: 10px 20px;
+    font-size: 200%;
+    border-bottom: 1px solid #c6d4e0;
+    text-shadow:1px 1px 0 #fff;
+    text-align: center;
+}
+
+hr {
+
+    border-bottom: 1px solid #c6d4e0;
+}
+
+.indent_2pct {
+
+    padding-left: 2%;
+}
+
+.indent_4pct {
+
+    padding-left: 4%;
+}
+
+#index {
+
+    width: 395px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#index a {
+
+    font-size: 1em;
+    color: #005A9C;
+}
+
+li {
+
+    padding-bottom: 0.4em;
+}
+
+li ul li:nth-child(1) {
+
+    padding-top: 10px;
+}
+
+div.list a {
+
+    display: block;
+    padding-bottom: 0.5em;
+}
+
+table.list td {
+
+    padding-right: 15px;
+}
+
+.note::before {
+
+    content: "Note:  ";
+    font-weight: bold;
+    white-space:pre-wrap;
+}
+
+.note {
+
+    padding: 10px;
+    background-color: #e8d8c3;
+    border-radius: 10px;
+}    
+
+.notes::before {
+
+    content: "Notes:  ";
+    font-weight: bold;
+    white-space:pre-wrap;
+}
+
+.notes {
+
+    padding: 10px;
+    background-color: #e8d8c3;
+    border-radius: 10px;
+}
+
+p {
+
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+p, li {
+
+    line-height: 140%;
+} 
+
+.reference::before {
+
+    content: "reference: ";
+    font-style: italic;
+}
+
+q {
+
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 0 4%;
+    
+}
+
+.see::before {
+
+    content: "see: ";
+    font-style: italic;
+}
+
+.see-also::before {
+
+    content: "see also:";
+    font-style: italic;
+}
+
+.small-caps {
+
+    font-variant: small-caps;
+}
+
+.source::before {
+
+    content: "source: ";
+    font-style: italic;
+}
+
+.sources::before {
+
+    content: "sources: ";
+    font-style: italic;
+}
+
+.specification::before {
+
+    content: "specification: ";
+    font-style: italic;
+}
+
+.syntax::before {
+
+    content: "Syntax: ";
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.syntax {
+
+    font-family: monospace;
+    padding: 10px;
+    background-color: #d6cadd;
+    border-radius: 10px;
+    
+}
+
+tbody tr td {
+
+    padding-bottom: 0.5em;
+    padding-right: 5em;   
+}
+
+th, td { /* ns 4 */
+
+  font-family: sans-serif;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+thead th {
+
+    text-align: left;
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;   
+}
+
+tr {
+
+    vertical-align: baseline;
+}
+
+.type-definition {
+
+    background-color: #c3d3e8;
+    padding: 1em;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}
+
+.unbold {
+
+   font-weight: 100;
+   color: #777;
+   white-space: pre-wrap;
+}
+
+.use::before {
+
+    content: "Element use: ";
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.use {
+
+    font-family: monospace;
+    padding: 10px;
+    background-color: #aac2bf;
+    border-radius: 10px;
+    white-space: pre-wrap; 
+    
+}
+
+.warning::before {
+
+    content: "Warning:  ";
+    font-weight: bold;
+    white-space:pre-wrap;
+}
+
+.warning {
+
+    padding: 10px;
+    background-color: #ffdfdf;
+    border-radius: 10px;
+}

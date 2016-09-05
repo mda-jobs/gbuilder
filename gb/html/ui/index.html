@@ -1,0 +1,151 @@
+<!DOCTYPE>
+<html>
+  
+<head>
+
+<title>Glossary Builder</title>
+
+<link rel='stylesheet' href='../../css/pure-min.css ' />
+
+<meta charset="UTF-8" />
+  
+<script>
+'use strict';
+let domains = [
+    
+        ["Hypertext Markup Language", HTML"],
+        ["Cascading Style Sheet", "CSS"],
+        ["Document Object Model", "DOM"],
+        ["XML Path Language", "XPath"],
+        ["Application Programming Interface", "API"],
+        ["Extensible Markup Language", "XML"],
+        ["JavaScript", ""],
+        ["ECMAScript", ""],
+        ["XML Schema", ""],
+        ["XML Query Language", "XQuery"],
+        ["XPointer", ""],
+        ["Web API", ""],
+        ["Software", ""],
+        ["Programming Language", ""],
+        ["Interface", ""],
+        ["Computer Science", ""],
+        ["Extensible Hypertext Markup Language", "XHTML"],
+        ["XHTML Modularization", ""]
+    ],
+    
+    entry = {},  // header, body, footer
+
+    header = {
+    
+        term: "",
+        context: "",
+        domain: "", // selection from domains select list.
+        extra: ""   // extra text floated to righ
+    }, // header corresponds to <dt> element
+    
+    body = {
+        
+        sections = [] // array of section objects
+    }, // body of <dd> element
+    
+
+    
+    footer = {
+
+        sources = [], // array of resource objects relative to citations       
+        cf: "",
+        see: [], // array of anchor objects relative to organizing term or concept
+        see-also: [], // array of anchor objects relative to related term
+        reference: [], // array of resource objects that elaborate on this term
+        specification: [] // array of resource objects relative to specification
+    }, // footer of <dd> element
+    
+    section = {
+        
+        heading: "",
+        definition: "",
+        usage: ""
+    },
+    
+    resource = {
+    
+        url: "",
+        title: "",
+        attribution: ""
+    }, // <a href='{{ href }}'></a>&mdash;{{ attribution }}
+    
+    anchor = {
+        
+        url: "",
+        title: "",
+        context: "" // wrap in <span> element
+    } // <a href='#{{ url }}'>{{ title }}<a>&nbsp;&nbsp;<span class='unbold'>{{context}}</span>
+);
+
+function scrape( form) {
+  model.key = form.key.value;
+  alert(model.key);
+}
+</script>
+
+</head>
+
+<body>
+  
+  <form class="pure-form">
+      <fieldset>
+          <legend>Header</legend>
+  
+          <input type="text" placeholder="Term">
+          <input type="text" placeholder="Context">
+          <input type="text" placeholder="Extra text">
+          <select id='domain'>
+            <option>Cascading Style Sheets (CSS)</option>
+          </select>
+          
+          <label for='domain'>Domain</label>
+      </fieldset>
+  </form>
+  
+  <!-- http://www.javaworld.com/article/2077176/scripting-jvm-languages/using-javascript-and-forms.html -->
+  <form id='entry' method='get' action=''>
+    <fieldset>
+      <legend>Glossary Entry</legend>
+      <p><label for='term'>Term:</label><br/><input id='key' type='text' /></p>
+      <p><label for='context'>Context:</label><br/><input id='context' type='text' /></p>
+      <p><label for='extra'>Extra text:</label><br/><input id='context' type='text' /></p>
+      <p><label for='domain'>Domain:</label><br/><input id='domain' type='text' /></p>
+      <p><label for='resource'>URL:</label><br/><input id='resource' type='text' /></p>
+      <p><label for='definition'>Definition:</label><br/><textarea id='definition' style='width: 100%; resize: vertical;'></textarea></p>
+      <p style='position: relative; left: 5px; right: 5px; bottom: 5px;'><label for'usage'>Usage:</label><br/><textarea id='usage' style='width: 100%; resize: vertical;'></textarea></p>
+    </fieldset>
+    <fieldset>
+      <legend>Footer</legend>
+      <p><label for='source'>Source:</label><br/><input id='source' type='text' /></p>
+      <p><label for='cf'>cf:</label><br/><input id='cf' type='text' /></p>
+      <p><label for='see'>see:</label><br/><input id='see' type='text' /></p>
+      <p><label for='see-also'>see also:</label><br/><input id='see-also' type='text' /></p>
+      <p><label for='specification'>Specification:</label><br/><input id='specification' type='text' /></p>
+    </fieldset>
+      <p><INPUT TYPE="button" NAME="button" Value="Click" onClick="scrape(this.form)"></p>
+  </form>
+</body>
+
+</html>
+
+<!-- 
+term: "request",
+context: "npm",
+extra: "",
+domain: "software",
+resource: "https://www.npmjs.com/package/request",
+definition: "Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.",
+usage: {
+    l1: "var request = require('request');",
+    l2: "request('http://www.google.com', function( error, response, body) {",
+    l3: "if( !error && response.statusCode == 200) {",
+    l4: "console.log( body) // Show the HTML for the Google homepage.",
+    l5: "}:",
+    l6: "})"
+}
+-->

@@ -1,0 +1,576 @@
+media="screen, projection, print"
+@media screen, projection, print
+h1, h2, h4, p, form, label, ul, ol, dl, fieldset, address {
+margin: 20px 0;
+}
+
+a {
+
+    text-decoration : none;
+    color: #3b5998;
+}
+
+a:hover {
+
+    text-decoration: underline
+}
+
+.attributes::before {
+
+    content: "Attributes: ";
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.attributes {
+
+    font-family: monospace;
+    padding: 10px;
+    background-color: #ffe5b4;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}
+
+
+body {
+  padding: 2em 5em 2em 70px;
+  font-family: small Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #333;
+  background: white;
+  background-position: top left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.cf::before {
+
+    content: "cf: ";
+    font-style: italic;
+    white-space: pre-wrap;
+}
+
+code {
+
+   font-size: 1.2em;
+   font-family: monospace;
+}
+
+.color-blue {
+
+    color: #005A9C;
+}
+
+.color-red {
++-/    color: red;
+}
+
+.content::before {
+
+    content: "Content: ";
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.content {
+
+    font-family: monospace;
+    padding: 10px;
+    background-color: #b4ffe5;
+    border-radius: 10px;
+    
+}
+
+.declaration {
+
+    background-color: #C9E9FA;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.definition {
+
+    background-color: #cdebf9;
+    padding: 1em;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}
+
+
+
+div.notes h4 {
+
+    color: #005A9C; 
+    background-color: #EFE0B9;
+}
+
+div p, q {
+
+    margin: 1em; 
+    line-height: 140%;
+    display: block;
+} 
+
+div pre {
+
+    margin: 1em; 
+}
+
+  
+
+dt {
+
+    font-weight: bold;
+    color: #551A8B;
+    font-size: 1.1em;
+}
+
+dl dt:nth-child(1n+2) {
+
+    padding-top: 20px;
+}
+
+span.escape {
+
+    font-family: small Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 0.95em;
+}
+
+.example {
+
+    font-family: monospace;
+    background-color: #d5d2cf;
+    padding: 1em;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}    
+
+
+h1, h2, h3, h4, h5, h6 { 
+
+    text-align: left 
+}
+
+/* background should be transparent, but WebTV has a bug */
+h1, h2, h3, h4 { 
+
+    color: #005A9C; background: white 
+}
+
+h1 { 
+
+    font: 170% sans-serif 
+}
+
+h2 { 
+
+    font: 140% sans-serif 
+}
+ 
+h3 { 
+
+    font: 120% sans-serif 
+}
+
+h4 { 
+
+    font: bold 100% sans-serif 
+}
+
+h5 { 
+
+    font: italic 100% sans-serif 
+}
+
+h6 { 
+
+    font: small-caps 100% sans-serif 
+}
+
+h1.title {
+
+    padding: 10px 20px;
+    font-size: 200%;
+    border-bottom: 1px solid #c6d4e0;
+    text-shadow:1px 1px 0 #fff;
+    text-align: center;
+}
+
+hr {
+
+    border-bottom: 1px solid #c6d4e0;
+}
+
+.indent_2pct {
+
+    padding-left: 2%;
+}
+
+.indent_4pct {
+
+    padding-left: 4%;
+}
+
+#index, #index_fn, #index_op, #index_sym, h3 {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#index {
+
+    width: 395px;
+}
+
+#index_fn {
+
+    width: 320px;
+}
+
+#index_op {
+
+    width: 240px;
+}
+
+#index_sym {
+
+    width: 300px;
+    
+}
+
+#index_sym a {
+
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+
+#index a, #index_fn a, #index_op a {
+
+    font-size: 1em;
+    color: #005A9C;
+}
+
+
+li {
+
+    padding-bottom: 0.4em;
+}
+
+li:first-child {
+
+    margin-top: -15px;
+}
+
+li > ul {
+
+     padding-top: 20px;
+}
+
+div.list a {
+
+    display: block;
+    padding-bottom: 0.5em;
+}
+
+table.list td {
+
+    padding-right: 15px;
+}
+
+.note::before {
+
+    content: "Note:  ";
+    font-weight: bold;
+    white-space:pre-wrap;
+}
+
+.note {
+
+    padding: 10px;
+    background-color: #e8d8c3;
+    border-radius: 10px;
+}    
+
+.notes::before {
+
+    content: "Notes:  ";
+    font-weight: bold;
+    white-space:pre-wrap;
+}
+
+.notes {
+
+    padding: 10px;
+    background-color: #e8d8c3;
+    border-radius: 10px;
+}
+
+
+
+p {
+
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+p, li {
+
+    line-height: 140%;
+} 
+
+.reference::before {
+
+    content: "reference: ";
+    font-style: italic;
+}
+
+q {
+
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 0 4%;
+    
+}
+
+.quote {
+
+    padding-left: 4%;
+    padding-right: 6%;
+    font-family: 'Segoe UI', Tahoma;   
+}
+
+.see::before {
+
+    content: "see: ";
+    font-style: italic;
+    white-space: pre-wrap;
+}
+
+.see-also::before {
+
+    content: "see also: ";
+    font-style: italic;
+    white-space: pre-wrap;
+}
+
+.small-caps {
+
+    font-variant: small-caps;
+}
+
+.source::before {
+
+    content: "source: ";
+    font-style: italic;
+    white-space: pre-wrap;
+}
+
+.sources::before {
+
+    content: "sources: ";
+    font-style: italic;
+    white-space: pre-wrap;
+}
+
+.syntax::before {
+
+    content: "Syntax:  ";
+    font-weight: bold;
+    font-size: 1.2em;
+    white-space: pre-wrap;
+}
+
+.syntax {
+
+    font-family: monospace;
+    padding: 10px;
+    background-color: #d6cadd;
+    border-radius: 10px;
+    
+}
+
+table {
+
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+table.hierarchy {
+
+    font-size: x-small;
+}
+
+#axis-table th, td:nth-child(-n+3) {
+
+    white-space: nowrap;
+    padding-right: 5px;  
+}
+
+
+#operator-summary-table td {
+
+    white-space: normal;
+    padding-right: 15px;
+}
+
+#dynamic-context-table th, #static-content-table th {
+
+    white-space: nowrap;
+    padding-right: 15px;;   
+}
+
+#dynamic-context-table td:nth-child(2), #static-context-table td:nth-child(2) {
+
+    white-space: normal;
+    padding-right: 15px;;   
+}
+
+#operator-mapping-4col td:last-child {
+
+    text-align: left;
+    padding: 3px;  
+}
+
+.spacer-1px {
+
+    padding-left: 1px;
+}
+
+.spacer-2px {
+
+    padding-left: 2px;
+}
+
+#static-context-table th {
+
+    white-space: nowrap;
+    padding-right: 15px;;   
+}
+
+#simple-map-op th {
+
+    white-space: pre-wrap;   
+}
+
+#simple-map-op td {
+
+    white-space: normal;
+}
+
+tbody tr td {
+
+    padding-bottom: 0.5em;
+    padding-right: 5em;   
+}
+
+td {
+
+    text-align: left;
+    padding: 3px;
+}
+
+td:last-child {
+
+    white-space: normal;
+}
+
+td.castOther { 
+
+    background-color: yellow;
+    color: black;
+}
+
+
+th {
+
+    background-color: #005A9C;
+    color: white;
+}
+
+th, td { /* ns 4 */
+
+    font-family: sans-serif;
+    border: 1px solid black;
+    padding: 7px;
+    text-align: left;
+    font-size: .8em;
+    
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+thead th {
+
+    text-align: left;
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;   
+}
+
+tr {
+
+    vertical-align: baseline;
+}
+
+tr:nth-child(even) {
+
+    background: #e8d8c3;    
+}
+
+.type-definition {
+
+    background-color: #c3d3e8;
+    padding: 1em;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}
+
+ol, ul {
+
+    padding-top: 10px;
+}
+
+.unbold {
+
+    font-weight: 100;
+    color: #777;
+    white-space: pre-wrap;
+}
+
+.use::before {
+
+    content: "Element use: ";
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.use {
+
+    font-family: monospace;
+    padding: 10px;
+    background-color: #aac2bf;
+    border-radius: 10px;
+    white-space: pre-wrap; 
+    
+}
+
+.warning::before {
+
+    content: "Warning:  ";
+    font-weight: bold;
+    white-space:pre-wrap;
+}
+
+.warning {
+
+    padding: 10px;
+    background-color: #ffdfdf;
+    border-radius: 10px;
+}

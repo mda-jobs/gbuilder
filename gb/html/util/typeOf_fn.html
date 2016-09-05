@@ -1,0 +1,22 @@
+<script>
+
+'use strict'
+function typeOf( type) {
+    try {
+        let s = type.constructor.toString();
+        return s.slice( 9, s.indexOf("("));
+    }
+    catch( e) {
+        return Object.prototype.toString.call(type).slice(8, -1);
+    }
+}
+// user defined type
+function Circle( radius) {
+    this.radius = radius;
+}
+let types = [ function() {}, [], {}, new Date(), new TypeError(), new Circle(10), document, window, "five", 5, true, Symbol(), Infinity, -Infinity, NaN, null, undefined];
+// Test runner
+for( let p in types) {
+    console.log( p + ": " + typeOf( types[p]));
+}
+</script>

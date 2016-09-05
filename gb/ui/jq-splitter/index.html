@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery splitter demo</title>
+<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="splitter.js"></script>
+<style type="text/css" media="all">
+
+
+</style>
+<script type="text/javascript">
+
+$(document).ready(function() {
+$("#splitterContainer").splitter({minAsize:100,maxAsize:300,splitVertical:true,A:$('#leftPane'),B:$('#rightPane'),slave:$("#rightSplitterContainer"),closeableto:0});
+$("#rightSplitterContainer").splitter({splitHorizontal:true,A:$('#rightTopPane'),B:$('#rightBottomPane'),closeableto:100});
+});
+</script>
+</head>
+
+<body>
+
+<div id="header">
+jQuery splitter v1.1 demo. Download&nbsp; <a href="splitter.zip">here</a></div>
+<div id="splitterContainer">
+	<div id="leftPane">
+		<p>This pane limited to a range of 100 to 300 pixels wide with the minAsize / maxAsize 
+		properties of the plugin..</p>
+		<p>&nbsp;</p>
+
+	</div>
+	<!-- #leftPane -->
+	<div id="rightPane">
+	<div style="height:5%;background:#bac8dc">Toolbar?</div>
+		<div id="rightSplitterContainer" style="height:95%">
+			<div id="rightTopPane">
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+				<p>testing</p>
+			</div>
+			<!-- #rightTopPane-->
+			<div id="rightBottomPane">
+				<div>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+					<p>some content</p>
+				</div>
+			</div>
+			<!-- #rightBottomPane--></div>
+		<!-- #rightSplitterContainer--></div>
+	<!-- #rightPane --></div>
+<!-- #splitterContainer -->
+
+</body>
+
+</html>

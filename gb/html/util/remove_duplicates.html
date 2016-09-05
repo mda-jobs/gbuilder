@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+
+<title></title>
+
+<meta charset='UTF-8' />
+
+<meta name='description' content='' />
+
+<meta name='keyword' content='' />
+
+<meta name='robots' content='index, follow' />
+
+
+
+</head>
+
+<body>
+
+<textarea id='data' style='width: 1000px; height: 500px'>add(in HTMLElement element), blur(), blur(), blur(), blur(), click(), close(), createCaption(), createTFoot(), createTHead(), deleteCaption(), deleteCell(in long index), deleteRow(in long index), deleteRow(in long index), deleteTFoot(), deleteTHead(), focus(), focus(), focus(), focus(), getElementsByName(in DOMString elementName), insertCell(in long index), insertRow(in long index), insertRow(in long index), item(in unsigned long index), item(in unsigned long index), namedItem(in DOMString name), namedItem(in DOMString name), open(), remove(in long index), reset(), select(), select(), submit(), write(in DOMString text), writeln(in DOMString text)</textarea>
+
+<button type='button' onClick='removeDuplicates()'>Remove Duplicates</button>
+
+<script>
+'use strict';
+function removeDuplicates() {
+    
+    let duplicates = document.getElementById("data").value,
+        arr = duplicates.split(", "),
+        map
+    ;
+        map = arr.filter(
+        
+            function( elem, i) {
+                
+                return arr.indexOf( elem) === i;
+            }
+        );
+        
+        console.log( map.toString());
+}
+ 
+
+
+</script>
+
+</body>
+
+<script>
+
+    
+</script>  
+
+</html>
+
+</script>
+
+</body>
+
+<script>
+
+    
+</script>  
+
+</html

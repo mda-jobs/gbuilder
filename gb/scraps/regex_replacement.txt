@@ -1,0 +1,35 @@
+[https://regex101.com/]
+
+
+<a href='#$1'><code>$1</code></a>
+
+<dt id='$1'>$1 <span class='unbold'></span><span id=''/><span class='unbold float-rt'></span></dt>\n<dd>\n  <p>\n\n  </p>\n\n  <hr/>\n\n  <p class='source'>\n    <a href=''></a>&mdash;\n  </p>\n  <p class='cf'>\n    <a href='#'></a>\n  </p>\n  <p class='see'>\n    <a href='#'></a>\n  </p>\n  <p class='see-also'>\n    <a href='#'></a>\n  </p>\n  <p class='reference'>\n    <a href='#'></a>\n  </p>\n  <div class='reference'>\n    <ul>\n      <li><a href=''></a>&mdash;</li>\n      <li><a href=''></a>&mdash;</li>\n  <li><a href=''></a>&mdash;</li>\n  </ul>\n  </div>\n</dd>\n
+
+$1 {\n\n    properties: "",\n\n    property: {\n\n    }\n\n    methods: "",\n\n    method: {\n\n    }\n
+
+"$1": {\n\n    identity: "",\n\n    context: "",\n\n    symantics: "",\n\n    note: "",\n\n    syntax: [\n\n        ["", ""],\n\n        ["", ""]\n\n    ],\n\n    example: {\n\n        html:\n\n        javascript:\n    }\n\n    specification: {\n\n        WHATWG: ""\n    },\n\n    cf: "",\n\n    "see also": "",\n\n    reference: [\n\n        ["MDN", "", ""],\n\n        ["", ""],\n\n        ["", "", ""],\n\n        ["", "", ""]\n    ]\n},\n\n
+
+Index
+-----
+([^,]+)(,)(.+)(\n)
+
+Property Table X6
+-----------------
+[\s\d\/|\[\],?+*#{}]+
+([^\t]+)(\t+)([^\t]+)(\t+)([^\t]+)(\t+)([^\t]+)(\t+)([^\t]+)(\t+)([^\t]+)(\n)
+
+Terms by refeence matrix
+------------------------
+([^,]+)(, )(.+)(\n)
+
+
+Property Summary
+----------------
+([^:]+)([:\s]+)(.+)
+<tr>\n\n  <td>$1:</td>\n\n  <td>$3</td></tr>\n\n
+
+Property Values
+---------------
+[\s\|\[\]?+*]+
+([^ \|]+)( \| )
+<a href='#$1~value'><code>$1</code></a> | 

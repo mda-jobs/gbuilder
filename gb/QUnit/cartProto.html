@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit basic example</title>
+  <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.21.0.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="//code.jquery.com/qunit/qunit-1.21.0.js"></script>
+  <script src='./pja-10.js'></script>
+  <!--script>
+    QUnit.test( "a basic test example", function( assert ) {
+      var value = "hello";
+      assert.equal( value, "hello", "We expect value to be hello" );
+    });
+  </script-->
+    <!--script>
+QUnit.test('Order WITH unintentional side effect.', function() {
+    var cartProto = {
+            items: [],
+            addItem: function addItem(item) {
+                this.items.push(item);
+            }
+        },
+        createCart = function(items) {
+            var cart = Object.create(cartProto);
+            cart.items = items;
+            return cart;
+        },
+        // Load cart with stored items.
+        savedCart = createCart(["apple", "pear", "orange"]),
+        session = {
+            get: function get() {
+                return this.cart;
+            },
+            // Grab the saved cart.
+            cart: createCart(savedCart.items)
+        };
+    // addItem gets triggered by an event handler somewhere:
+    session.cart.addItem('grapefruit');
+    ok(session.cart.items.indexOf('grapefruit') !== -1, 'Passes: Session cart has grapefruit.');
+    ok(savedCart.items.indexOf('grapefruit') === -1,
+        'Fails: The stored cart is unchanged.');
+});
+</script-->
+<script>fn()</script>
+</body>
+</html>

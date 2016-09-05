@@ -1,0 +1,3223 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>XML Glossary</title>
+
+<meta http-equiv='Content-type' content='text/html; charset=ISO-8859-1'/>
+
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<h1 class='title'><a href='#Extensible_Markup_Language'>Extensible Markup Language</a></h1>
+
+<div id='index'>
+
+  <a href='#index_A'>A</a>
+  <a href='#index_B'>B</a>
+  <a href='#index_C'>C</a>
+  <a href='#index_D'>D</a>
+  <a href='#index_E'>E</a>
+  <a href='#index_F'>F</a>
+  <a href='#index_G'>G</a>
+  <a href='#index_H'>H</a>
+  <a href='#index_I'>I</a>
+  <a href='#index_J'>J</a>
+  <a href='#index_K'>K</a>
+  <a href='#index_L'>L</a>
+  <a href='#index_M'>M</a>
+  <a href='#index_N'>N</a>
+  <a href='#index_O'>O</a>
+  <a href='#index_P'>P</a>
+  <a href='#index_Q'>Q</a>
+  <a href='#index_R'>R</a>
+  <a href='#index_S'>S</a>
+  <a href='#index_T'>T</a>
+  <a href='#index_U'>U</a>
+  <a href='#index_V'>V</a>
+  <a href='#index_W'>W</a>
+  <a href='#index_X'>X</a>
+  <a href='#index_Y'>Y</a>
+  <a href='#index_Z'>Z</a>
+
+</div>
+
+<!-- Printable ASCII Characters in numerical order 
+
+     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+
+-->
+
+<!-- Printable ASCII Characters in numerical order with Alpha Numberic characters removed
+
+     !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+
+-->
+
+  <dl class='indent_2pct'>
+
+    <dt id='#x'>#x <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        See <a href='#numeric_character_reference'>numeric character reference</a>.
+      </p>
+
+      <hr/>
+    </dd>
+
+</dl>
+
+<h3 id='index_A'>A</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='attribute'>attribute <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        An attribute is used to associate a name-value pair with an element. Attribute specifications must not appear outside of a start-tag or empty-element tag; thus, the productions used to recognize them appear in <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#sec-starttags'>3.1 Start-Tags, End-Tags, and Empty-Element Tags</a>. An attribute has a data type and a default. These are specified in an <a href='attribute-list_declaration'>Atribute-list declaration</a>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://www.w3.org/TR/REC-xml/#attdecls'>3.3 Attribute-List Declarations</a>&mdash;XML Path Language (XPath) 3.1; 18 December 2014
+      </p>
+      <p class='cf'>
+        <a href='#element'>element</a>
+      </p>
+      <p class='see-also'>
+        <a href='#attribute-list_declaration'>attribute-list declaration</a>
+      </p>
+    </dd>
+
+    <dt id='attribute-list_declaration'>attribute-list declaration <span class='unbold'>  <code>AttlistDecl</code></span><span id='attribute_declaration'/></dt>
+    <dd>
+      <p>
+        Attribute-list declarations specify the name, data type, and default value (if any) of each attribute associated with a given element type. Here are some examples:
+      </p>
+<pre class='example'>
+&lt;!ATTLIST termdef
+          id      ID      #REQUIRED
+          name    CDATA   #IMPLIED&gt;
+&lt;!ATTLIST list
+          type    (bullets|ordered|glossary)  "ordered"&gt;
+&lt;!ATTLIST form
+          method  CDATA   #FIXED "POST"&gt;
+</pre>
+      <p>
+        Attribute-list declarations may be used:</p>
+        <ul>
+	  <li>
+	    To define the set of attributes pertaining to a given element type.</li>
+	  <li>
+	    To establish type constraints for these attributes.</li>
+	  <li>
+	    To provide default values for attributes.
+          </li>
+        </ul>
+      <p>
+	The <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Name'><code>Name</code></a> in the <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#NT-AttlistDecl'><code>AttlistDecl</code></a> rule is the name of an element; also referred to as its <i>type</i>. The <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Name'><code>Name</code></a> in the <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#NT-AttDef'><code>AttDef</code></a> rule is the name of an attribute.
+      <hr/>
+
+      <p class='source'>
+        <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#attdecls'>3.3 Attribute-List Declarations</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition)
+      </p>
+      <p class='see'>
+        <a href='#markup_declaration'>markup declaration</a>
+      </p>
+      <p class='see-also'>
+        <a href='#attribute_type'>attribute type</a>
+      </p>
+    </dd>
+
+    <dt id='attribute_type'>attribute type <span class='unbold'>  <code>AttType</code></span><span id=''/></dt>
+    <dd>
+      <p>
+        An <i>attribute type</i> is a constraint on the value of an attribute specified in an <a href='#attribute-list_declaration'>Attribute-list declaration</a>. There are three categories of attribute type: a <a href='#string_type'>string type</a>, a set of <a href='#tokenized_type'>tokenized type</a>s, and two <a href='#enumerated_type'>enumerated type</a>s. The <a href='#string_type'>string type</a> may take any literal string as a value; the <a href='#tokenized_type'>tokenized type</a>s are more constrained.</p>
+      <p class='note'>
+	The validity constraints noted in the grammar are applied after the attribute value has been normalized as described in <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#AVNormalize'>3.3.3 Attribute-Value Normalization</a>.
+      </p>
+
+      <p class='source'>
+	<a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <div class='see-also'>
+        <ul>
+          <li><a href='#enumerated_type'>enumerated type</a></li>
+          <li><a href='#string_type'>string type</a></li>
+          <li><a href='#tokenized_type'>tokenized type</a></li>
+        </ul>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_B'>B</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_C'>C</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='canonical'>canonical <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+	The process of tuning a document into canonical form is summarized as follows:</p>
+        <ul>
+          <li>
+	    The document is encoded in UTF-8</li>
+          <li>
+	    Line breaks are normalized to <code>#xA</code></li>
+          <li>
+	    Attribute values are normalized, depending on the attribute type</li>
+          <li>
+	    Character references and parsed entity references are expanded</li>
+          <li>
+	    CDATA sections are replaced with their character content</li>
+          <li>
+	    The XML declaration and document type declaration (DTD) are removed</li>
+          <li>
+	    Empty element tags (</code>&lt;a/&gt;</code>) are converted to tag pairs (<code>&lt;a&g;&lt;/a&gt;</code>)</li>
+          <li>
+	    Whitespace outside the document element and within tags is normalized</li>
+          <li>
+	    Attribute value delimiters are set to double quotes</li>
+          <li>
+	    Special characters in attribute values and character content are replaced by character references</li>
+          <li>
+	    Redundant namespace declarations are removed</li>
+          <li>
+	    Default attribute values defned in the DTD are added to each element</li>
+          <li>
+	    Attributes and namespace declarations are sorted into alphabetical order
+	  </li>
+	</ul>
+      <p>
+        The following figure illustrates the resulting classificaion: the central core is information that is retained in canonical form; the "peripheral" ring is information that is present in the Infoset but not in canoncal XML; while the outer ring represents feaures of an XML doducment that are excluded from the information set entirely.</p>
+      <div>
+        <img src="./images/infoset.png">
+      </div>
+
+      <p class='source'>
+        <a href='http://books.google.com/books?id=Xw3_tzEJVEwC&pg=PA55&source=gbs_selected_pages&cad=2#v=onepage&q&f=false'>XPath 2.0 Programmer's Reference</a> , (page 54) by Michael Kay&mdash; Wiley Publishing, Inc.
+      </p>
+      <p class='cf'>
+        <a href='#XML_Information_Set'>XML Infomation Set</a>
+      </p>
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/xml-c14n'>Canonical XML Version 1.0</a>&mdash;15 March 2001
+      </p>
+    </dd>
+
+    <dt id='CDATA'>CDATA <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+	The term CDATA finds two applications in XML; as an <a href='#attribute_type'>attribute type</a> (see <a href='#string_type'>string type</a>) and as a section marker to escape blocks of text containing characters which would otherwise be recognized as markup.</p>
+
+      <h4>CDATA attribute</h4>
+
+      <p>
+        A <code>CDATA</code> attribute value can contain any string of text acceptable in a well-formed XML attribute value. This is the most general attribute type. For example, you would use this type for an <a href='http://www.w3.org/TR/html5/embedded-content-0.html#alt'><code>alt</code></a> attribute of an image element because there's no particular form the text in such an attribute has to follow.
+      </p>
+<pre class='example'>
+&lt;!ATTLIST image alt CDATA #IMPLIED&gt;
+</pre>
+      <p>
+        You would also use the CDATA <a href='#string_type'>string type</a> for other kinds of data such as prices, URIs, email and snail mail addresses, citations, and other types that--while they have more structure than a simple string of text--don't match any of the other attribute types. For example:
+      </p>
+<pre class='example'>
+&lt;!ATTLIST sku
+ list_price             CDATA #IMPLIED
+ suggested_retail_price CDATA #IMPLIED
+ actual_price           CDATA #IMPLIED
+&gt;
+&lt;!-- All three attributes should be in the form $XX.YY --&gt;
+</pre>
+
+      <h4>CDATA Sections</h4>
+
+      <p>
+	<code>CDATA</code> sections may occur anywhere character data may occur; they are used to escape blocks of text containing characters which would otherwise be recognized as markup. CDATA sections begin with the string " <b>&lt;![CDATA[</b> " and end with the string " <b>]]&gt;</b> ".
+      </p>
+      <p>
+	An example of a <code>CDATA</code> section, in which " <code>&lt;greeting&gt;</code> " and " <code>&lt;/greeting&gt;</code> " are recognized as <a href='#character_data'>character data</a>, not <a href='markup'>markup</a>:
+      </p>
+<pre class='example'>
+&lt;![CDATA[&lt;greeting&gt;Hello, world!&lt;/greeting&gt;]]&gt;
+</pre>
+      <div class='sources'>
+        <ul>
+          <li><a href='http://www.w3.org/TR/2008/REC-xml-20081126/#sec-cdata-sect'>2.7 CDATA Sections</a>&mdash;XML Path Language (XPath) 3.1; 18 December 2014</li>
+          <li><a href='#http://docstore.mik.ua/orelly/xml/xmlnut/ch03_03.htm#xmlnut2-CHP-3-SECT-3.1.1'>3.3.1.1. CDATA</a>&mdash;XML in a Nutshell, 2ed</li>
+        </ul>
+      </div> 
+    </dd>
+
+    <dt id='CDATA_section'>CDATA section <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+	<code>CDATA</code> sections may occur anywhere character data may occur; they are used to escape blocks of text containing characters which would otherwise be recognized as markup. CDATA sections begin with the string " <b>&lt;![CDATA[</b> " and end with the string " <b>]]&gt;</b> ".
+      </p>
+      <p>
+	An example of a <code>CDATA</code> section, in which " <code>&lt;greeting&gt;</code> " and " <code>&lt;/greeting&gt;</code> " are recognized as <a href='#character_data'>character data</a>, not <a href='markup'>markup</a>:
+      </p>
+<pre class='example'>
+&lt;![CDATA[&lt;greeting&gt;Hello, world!&lt;/greeting&gt;]]&gt;
+</pre> 
+      <p class='source'>
+        <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#sec-cdata-sect'>2.7 CDATA Sections</a>&mdash;XML Path Language (XPath) 3.1; 18 December 2014
+      </p>
+    </dd>
+
+    <dt id='character'>character <span class='unbold'>  </span><span id=''/></dt>
+    <dd>
+      <p>
+         A character is an atomic unit of <a href='#text'>text</a> as specified by <a href='http://www.iso.org/iso/catalogue_detail.htm?csnumber=29819'>ISO/IEC 10646</a>. Legal characters are tab, carriage return, line feed, and the legal characters of Unicode and ISO/IEC 10646. The versions of these standards cited in A.1 Normative References were current at the time this document was prepared. New characters may be added to these standards by amendments or new editions. Consequently, XML processors must accept any character in the range specified for <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char'><code>Char</code></a>.</p>
+      <p>
+	The range of characters allowed in XML documents is specified by XML production for <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#NT-Char'>[2] Char</a>.
+      </p>
+
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#charsets'>W3C&mdash;&sect; 2.2 Characters</a>; Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='see'>
+        <a href='#text'>text</a>
+      </p>
+      <p class='see-also'>
+        <a href='#CDATA'>CDATA</a>
+      </p>
+    </dd>
+
+    <dt id='character_data'>character data <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        All <a href='#text'>text</a> that is not <a href='#markup'>markup</a> constitutes the <i>character data</I> of the document.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#dt-chardata'>2.4 Character Data and Markup</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='cf'>
+        <a href='#markup'>markup</a>
+      </p>
+      <p class='see'>
+        <a href='#text'>text</a>
+      </p>
+      <p class='see-also'>
+        <a href='#CDATA'>CDATA</a>
+      </p>
+    </dd>
+
+    <dt id='character_entity_reference'>character entity reference <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+	A <a href='#character_entity_reference'>character entity reference</a>, also know as <i>named character reference</i>, refers to a character by the name of an entity which has the desired character as its replacement text. The entity must either be predefined (built into the markup language) or explicitly declared in a Document Type Definition (DTD). The format is the same as for any entity reference. For example, the heart could be defined in a DTD as follows
+      </p>
+<pre class='example'>
+&lt;!ENTITY heart    CDATA "&amp;#x2665;" -- heart graphic symbol --&gt;
+</pre>
+      <p>
+	To use this entity in the HTML definition of a web page, it would be dereferenced just like any of the five predefined entities such as ampersand <code>&amp;</code>, greater than <code>&gt;</code> or less than <code>&lt;</code>:
+      </p>
+<pre class='example'>
+&amp;heart;
+</pre>
+
+      <p class='source'>
+        <a href='http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references'>Character reference overview</a>&mdash;Wikipedia
+      </p>
+      <p class='cf'>
+        <a href='#numeric_character_reference'>numeric character reference</a>
+      </p>
+      <p class='see'>
+        <a href='#character'>character</a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href='http://www.elizabethcastro.com/html/extras/entities.html'>Character Entity References in HTML 4 and XHTML 1.0</a>&mdash;elizabethcastro.com</li>
+          <li><a href='http://www.webstandards.org/learn/reference/charts/entities/'>Character Entities in HTML & XHTML</a>&mdash;webstandards.org</li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='character_reference'>character reference <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        A <i>character reference</i>, also know as <i>numeric character reference</i>, refers to a specific character in the <a href='http://www.iso.org/iso/catalogue_detail.htm?csnumber=56921'>ISO/IEC 10646</a> character set, for example one not directly accessible from available input devices.</p>
+      <p>
+	The form that a character reference must take in order to be interpreted by a user agent is defined by the XML production for <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#sec-references'><code>[66] CharRef</code>. An expression produced with this construction must match the XML production for <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#NT-Char'><code>[2] Char</code></a>.</p>
+      <p>
+	The utility of the character reference is that it compliments the limited number of characters that can be produced with a standard input device, providing a means for displaying characters outside its range. The downside however, is the need to know the hexadecimal number that maps to the character. An intermediate approach is to use a <a href='#character_entity_reference'>character entity reference</a>, that maps an easily rememberd entity name to the most commonly used characters. For example, the heart symbol (&#x2665;), can be generated in the following ways:</p>
+      <ol>
+	<li>
+	  The character reference <code>&amp;#x2665</code></li>
+        <li>
+	  The character entity reference <code>&amp;heart;</code>
+        </li>
+      </ol>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#sec-references'>W3C&mdash;&sect; 4.1 Character and Entity References</a>; Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='cf'>
+        <a href='#character_entity_reference'>character entity reference</a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <p class='reference'>
+        <a href='#'></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008</li>
+          <li><a href=''></a>&mdash;</li>
+          <li><a href=''></a>&mdash;</li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='comment'>comment <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        A comment is free form text enclosed in comment start and end tags. For example:
+      </p>
+<pre class='example'>
+&lt;!-- This is a comment --&gt;
+</pre>
+      <p>
+	Comments may appear anywhere in a document outside other markup; in addition, they may appear within the document type declaration at places allowed by the grammar. They are not part of the document's character data; an XML processor may, but need not, make it possible for an application to retrieve the text of comments. For compatibility, the string " -- " (double-hyphen) must not occur within comments.] Parameter entity references must not be recognized within comments.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://www.w3.org/TR/xml/#sec-comments'>2.5 Comments</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 26 November 2008
+      </p>
+    </dd>
+
+    <dt id='content'>content <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+	The <a href='#text'>text</a> between the start-tag and end-tag is called the element's content.</p>
+      <p>
+        The content of an element is specified by XML production for <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#NT-content'>[43] content</a>. 
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#IDAYSXR'>W3C&mdash;&sect; 3.1 Start-Tags, End-Tags, and Empty-Element Tags</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='cf'>
+        <a href='#element_content'>element content</a>
+      </p>
+    </dd>
+
+</dl>
+
+<h3 id='index_D'>D</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='document_element'>document element <span class='unbold'></span><span id='' /></dt>
+    <dd>
+      <p>
+        See <a href='root_element'>root element</a>.
+      </p>
+
+      <hr/><br/>
+ 
+    </dd>    
+
+    <dt id='document_type_declaration'>document type declaration <span class='unbold'>  DTD</span><span id=''/></dt>
+    <dd>
+      <p>
+        The XML <i>document type declaration</i> contains or points to <a href='#markup_declaration'>markup declaration</a>s that provide a grammar for a class of documents. This grammar is known as a <i>document type definition</i>, or DTD. The document type declaration can point to an external subset (a special kind of <a href='#external_entity'>external entity</a>) containing markup declarations, or can contain the markup declarations directly in an <a href='#internal_subset'>internal subset</a>, or can do both. The DTD for a document consists of both subsets taken together.</p>
+      
+      <h3>Requirements</h3>
+      
+      <ul>
+	      <li>
+	        The keyword DOCTYPE must be in upper case</li>
+	      <li>
+	        The keyword DOCTYPE must appear before the <a href='#root_element'>root element</a> of the document</li>
+	      <li>
+	        The document type definition (DTD) must contain an <a href='#internal_subset'>internal subset</a>, point to an <a href='#external_subset'>external subset</a>, or both.
+	      </li>
+      </ul>
+      
+      <h3>Syntax</h3>
+      
+<pre class='example'>
+&lt;!DOCTYPE <i>root-element</i> PUBLIC "<i>FPI</i>" ["<i>URI</i>"] [ 
+&lt;!-- internal subset declarations --&gt;
+]&gt;
+</pre>
+      <p>or</p>
+<pre class='example'>
+&lt;!DOCTYPE <i>root-element</i> SYSTEM "<i>URI</i>" [ 
+&lt;!-- internal subset declarations --&gt;
+]&gt;  
+</pre>
+      <p class='note'>
+        HTML5 officially severed its connection with XML, and therefore only uses the document type declaration to point to the root element. It does not use a DTD.
+      </p>
+      <h3>Example</h3>
+      
+<pre class='example'>
+&lt;!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html lang="ar" dir="ltr" xmlns="http://www.w3.org/1999/xhtml"&gt;  
+</pre>
+
+      <p class='source'>
+        <a href='http://www.w3.org/TR/xml/#sec-prolog-dtd'>W3C&mdash;&sect; 2.8 Prolog and Document Type Declaration</a>; Extensible Markup Language (XML) 1.0 (Fifth Edition); 26 November 2008
+      </p>
+      <p class='see'>
+        <a href='#prolog'>prolog</a>
+      </p>
+      <p class='see-also'>
+        <a href='#FPI'>FPI</a>
+      </p>
+        <div class='reference'>
+          <ul>
+            <li><a href='#FPI'>FPI</a</li>
+            <li><a href='PUBLIC'>PUBLIC</a></li>
+            <li><a href='SYSTEM'>SYSTEM</a></li>
+          </ul>
+        </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_E'>E</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='element'>element <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+	An instance of an <a href='#element_type'>element type</a>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='https://www.w3.org/TR/xhtml-modularization/xhtml-modularization-rec-diff.html#a_terms'>W3C&mdash;&sect; 2. Terms and Definitions</a>XHTML Modularization 1.1 - Second Edition; 29 July 2010
+      </p>
+      <p class='cf'>
+        <a href='#attribute'>attribute</a>
+      </p>
+      <p class='reference'>
+        <a href='http://www.ibm.com/developerworks/library/x-eleatt/'>IBM Developerworks&mdash;Principles of XML design: When to use elements versus attributes</a> by Uche Ogbuji; 04 March 2004
+      </p>
+    </dd>
+
+    <dt id='element_content'>element content <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        An element type has <i>element content</i> when elements of that type must contain only child elements (no <a href='#character_data">character data</a>), optionally separated by white space (characters matching the nonterminal <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#NT-S'>S</a>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>W3C&mdash;&sect; <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#dt-elemcontent'>3.2.1 Element Content</a>; Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='cf'>
+        <a href='#content'>content</a>
+      </p>
+    </dd>
+
+    <dt id='element_type'>element type <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <div class='color-ltBlue'>
+        <p>
+          The definition of an <a href='#element'>element</a>, that is, a container for a distinct semantic class of document content.</p>
+        <p class='source'>&nbsp;&nbsp;W3C &ndash; &sect; <a href='https://www.w3.org/TR/xhtml-modularization/xhtml-modularization-rec-diff.html#a_terms'>2. Terms and Definitions</a>; XHTML Modularization 1.1 - Second Edition; 29 July 2010
+        </p>
+      </div>
+      <p>
+        An element type is the main logical structural of an XML document. It has a name and optional attributes. It must begin with a <a href='#start-tag'>start-tag</a>. If it has content, it must have a matching <a href='#end-tag'>end-tag</a>. If <a href='#empty'>empty</a>, the <a href='#end-tag'>end-tag</a> may be abbreviated, in which case it is called an <a href='#empty-element_tag'>empty-element tag</a>. The characters between the <a href='#start-tag'>start-tag</a> and <a href='#end-tag'>end-tags</a>, if any, are the element's <a href='#content'><i>content</i></a>, and may contain <a href='#markup'>markup</a>, including other elements, which are called child elements.</p>
+      <p>
+
+      <h4>Example</h4>
+
+      <p>
+	The following XML fragment of a <code>shipTo</code> element type is taken from a purchase order application:
+      </p>
+<pre class='example'>
+&lt;shipTo country="US"&gt;
+   &lt;name&gt;Alice Smith&lt;/name&gt;
+   &lt;street&gt;123 Maple Street&lt;/street&gt;
+   &lt;city&gt;Mill Valley&lt;/city&gt;
+   &lt;state&gt;CA&lt;/state&gt;
+   &lt;zip&gt;90952&lt;/zip&gt;
+&lt;/shipTo&gt;/&gt;</code>.
+</pre>
+      <p>
+        The <code>shipTo</code> element type has <a href='#element_content'>element content</a>. The <code>name</code>, <code>street</code>,
+<code>city</code>, <code>state</code>, and <code>zip</code>, child elements, are element types in their own right. However they differ in that they have no <a href='#element_content'>element content</a>&mdash;only <a href='#character_data'>character data</a>.
+
+      </p>
+
+      <hr/>
+
+      <p class='cf'>
+        <a href='#attribute'>attribute</a>
+      </p>
+    </dd>
+
+    <dt id='empty'>empty <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        An element with no <a href='#content'>content</a> is said to be <i>empty</i>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#NT-content'>3.1 Start-Tags, End-Tags, and Empty-Element Tags</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='cf'>
+        <a href='#end-tag'>end-tag</a>
+      </p>
+      <p class='see'>
+        <a href='#markup'>markup</a>
+      </p>
+      <p class='see-also'>
+        <a href='#empty-element_tag'>empty-element tag</a>
+      </p>
+      <p class='reference'>
+        <a href='#'></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008</li>
+          <li><a href=''></a>&mdash;</li>
+          <li><a href=''></a>&mdash;</li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='empty-element_tag'>empty-element tag <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        An <i>empty-element tag</i> is defined by the XML production for <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#NT-ETag'><code>[44] EmptyElemTag</code></a>. It combines all of the elements of the <a href='#start-tag'>start-tag</a> plus a trailing forward slash character <code>/</code> between the final attribute and the closing delimiter. An <i>empty-element tag</i> has no <a href='#content'>content</a>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        Editor
+      </p>
+      <p class='see'>
+        <a href='#markup'>markup</a>
+      </p>
+      <div class='see-also'>
+        <ul>
+          <li><a href='#empty'>empty</a></li>
+          <li><a href='#start-tag'>start-tag</a></li>
+          <li><a href='#end-tag'>end-tag</a></li>
+        </ul>
+      </div>
+      <p class='reference'>
+        <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#NT-ETag'>3.1 Start-Tags, End-Tags, and Empty-Element Tags</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+    </dd>
+
+    <dt id='end-tag'>end-tag <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        An <i>end-tag</i> is defined by the XML production for <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#NT-ETag'><code>[42] ETag</code></a>. It consists of the opening delimiter: <code>&lt;</code>, followed by a forward slash <code>/</code>, the type name, and the closing delimter: <code>&gt;</code>. The end of every element that begins with a start-tag must be marked by an end-tag containing a name that echoes the element's type as given in the <a href='#start-tag'>start-tag</a>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        Editor
+      </p>
+      <p class='cf'>
+        <a href='#start-tag'>end-tag</a>
+      </p>
+      <p class='see'>
+        <a href='#markup'>markup</a>
+      </p>
+      <p class='see-also'>
+        <a href='#empty-element_tag'>empty-element tag</a>
+      </p>
+      <p class='reference'>
+        <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#dt-stag'>W3C&mdash;&sect; 3.1 Start-Tags, End-Tags, and Empty-Element Tags</a> ;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+    </dd>
+
+    <dt id='ENTITY'>ENTITY <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#tokenized_type'>tokenized type</a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='ENTITIES'>ENTITIES <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#tokenized_type'>tokenized type</a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='enumeration'>enumeration <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        An <i>enumeration</i> is the only <a href='#attribute_type'>attribute type</a> that is not an XML keyword. Rather, it is a list of all possible values for the attribute, separated by vertical bars. Each possible value must be an <a href='#XML_name'>XML name</a> token. For example, the following declarations say that the value of the <code>month</code> attribute of a <code>date</code> element must be one of the twelve English month names, that the value of the <code>day</code> attribute must be a number between 1 and 31, and that the value of the <code>year</code> attribute must be an integer between 1970 and 2009:
+      </p>
+<pre class='example'>
+&lt;!ATTLIST date month (January | February | March | April | May | June
+  | July | August | September | October | November | December) #REQUIRED
+&gt;
+&lt;!ATTLIST date day (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+  | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25
+  | 26 | 27 | 28 | 29 | 30 | 31) #REQUIRED
+&gt;
+&lt;!ATTLIST date year (1970 | 1971 | 1972 | 1973 | 1974 | 1975 | 1976
+  | 1977 | 1978 | 1979 | 1980 | 1981 | 1982 | 1983 | 1984 | 1985 | 1986
+  | 1987 | 1988 | 1989 | 1990 | 1991 | 1992 | 1993 | 1994 | 1995 | 1996
+  | 1997 | 1998 | 1999 | 2000 | 2001 | 2002 | 2003 | 2004 | 2005 | 2006
+  | 2007 | 2008 | 2009 ) #REQUIRED
+&gt;
+&lt;!ELEMENT date EMPTY&gt;
+</pre>
+      <p>
+        Given this DTD, this date element is valid:
+      </p>
+<pre class='example'>
+&lt;date month="January" day="22" year="2001"/&gt;
+</pre>
+      <p>
+        However, these date elements are invalid:
+      </p>
+<pre class='example'>
+&lt;date month="01"      day="22" year="2001"/&gt;
+&lt;date month="Jan"     day="22" year="2001"/&gt;
+&lt;date month="January" day="02" year="2001"/&gt;
+&lt;date month="January" day="2"  year="1969"/&gt;
+&lt;date month="Janvier" day="22" year="2001"/&gt;
+</pre>
+      <p>
+        This trick works here because all the desired values happen to be legal XML name tokens. However, we could not use the same trick if the possible values included whitespace or any punctuation besides the underscore, hyphen, colon, and period.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://docstore.mik.ua/orelly/xml/xmlnut/ch03_03.htm#xmlnut2-CHP-3-SECT-3.1.4'>3.3.1.4. Enumeration</a>&mdash;XML in a Nutshell, 2ed
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <p class='reference'>
+        <a href='#'></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008</li>
+          <li><a href=''></a>&mdash;</li>
+          <li><a href=''></a>&mdash;</li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='enumerated_type'>enumerated type <span class='unbold'>  EnumeratedType</span><span id=''/></dt>
+    <dd>
+      <p>
+        An <i>enumerated type</i>, one of three kinds of <a href='#attribute_type'>attribute type</a>, is used in an <a href='#attribute-list_declaration'>Attribute-list declaration</a> to specify that an attribute is either a <a href='#notation'>notation</a> or <a href='#enumeration'>enumeration</a>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        Editor
+      </p>
+      <div class='cf'>
+        <ul>
+          <li><a href='#string_type'>string type</a></li>
+          <li><a href='#tokenized_type'>tokenized type</a></li>
+        </ul>
+      </div>
+      <div class='see-also'>
+        <ul>
+          <li><a href='#notation_type'>notation type</a></li>
+          <li><a href='#enumeration'>enumeration</a></li>
+        </ul>
+      </div>
+      <p class='reference'>
+	<a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+    </dd>
+
+    <dt id='Extensible_Markup_Language'>Extensible Markup Language <span class='unbold'>  XML</span><span id='XML'/></dt>
+    <dd>
+      <p>
+        Extensible Markup Language (XML) is a meta language, specified by the <a href='http://www.w3.org/'>World Wide Web Consortium</a> (W3C), for defining plain text documents that contain structured information. The following XML fragment describes a few elements of a simple book catalog:</p>
+<pre class='example'>
+&lt;?xml version="1.0"?&gt;
+&lt;catalog&gt;
+...
+   &lt;book id="bk101"&gt;
+      &lt;author&gt;Gambardella, Matthew&lt;/author&gt;
+      &lt;title&gt;XML Developer's Guide&lt;/title&gt;
+      &lt;genre&gt;Computer&lt;/genre&gt;
+      &lt;price&gt;44.95&lt;/price&gt;
+      &lt;publish_date&gt;2000-10-01&lt;/publish_date&gt;
+      &lt;description&gt;An in-depth look at creating applications 
+      with XML.&lt;/description&gt;
+   &lt;/book&gt;
+   &lt;book id="bk102"&gt;
+      &lt;author&gt;Ralls, Kim&lt;/author&gt;
+      &lt;title&gt;Midnight Rain&lt;/title&gt;
+      &lt;genre&gt;Fantasy&lt;/genre&gt;
+      &lt;price&gt;5.95&lt;/price&gt;
+      &lt;publish_date&gt;2000-12-16&lt;/publish_date&gt;
+      &lt;description&gt;A former architect battles corporate zombies, 
+      an evil sorceress, and her own childhood to become queen 
+      of the world.&lt;/description&gt;
+   &lt;/book&gt;
+...
+&lt;/catalog&gt;
+</pre>
+      <p>
+	The primary structure of an XML document is the element. Elements nest like a set of Russian dolls. Elements have a name such as <code>catalog</code> and <code>book</code>, and may contain one or more attributes, in this example, <code>version</code> and <code>id</code>. Attributes associate a name with a value. 
+
+      <p>
+ 	In XML, the document structure, including the names of elements and attributes are chosed by the document designer. If the names are chosen such that the majority of readers can easily attach meaning to what the data is about, the designer has created a "self-describing" XML document.</p>
+      </p>
+
+      <p class='note'>
+	Guidelines re when to use an attribute or element to model data can only be give in general terms&mdash;the decision making process cannot be reduced to a logically rigorous set of tests. For documents intended for human consumption, model data that is core to your communication as element content. For meta-data or information that is peripheral or incidental to the main communication, or purely intended to help applications process the main communication, model the data with an attribute. Data that has multiple parts and a logical relationship is well suited for modeleling as element content. Data that is atomic, or can be represented as a list or enumeration, relative to a single concept, such as the date of birth or death of a person, is well suited for modeling in attribute form.
+      </p>
+
+      <h4 cite='https://ccollins.wordpress.com/2008/03/03/a-brief-history-of-xml/'>Brief History</h4>
+      
+      <p>
+     	Extensible Markup Languages (XML) history begins with the development of Standardised Generalised Markup Language (SGML) by Charles Goldfarb, along with Ed Mosher and Ray Lorie in the 1970s while working at IBM (Anderson, 2004). SGML despite the name is not a mark-up language in itÃ¯Â¿Â½s own right, but is a language used to specify mark-up languages. The purpose of SGML was to create vocabularies which could be used to mark up documents with structural tags. It was imagined at the time, that certain machine readable documents should remain machine readable for perhaps decades.</p>
+      <p>
+     	One of the most popular applications of SGML came with the development of HyperText Markup Language (HTML) by Tim Berners Lee in the late 1980s (Raggett, Lam, Alexander & Kmiec, 1998). Since its development HTML has somewhat become a victim of itÃ¯Â¿Â½s own popularity, as it was rapidly adopted and extended in many ways, beyond itÃ¯Â¿Â½s original vision. It remains popular today, though as a presentation technology, and is considered unsuitable as a general purpose data storage format.</p>
+      <p>
+     	When it comes to data storage and interchange, HTML is a bad fit, as it was originally intended as a presentation technology, while SGML is considered too complex for general use. XML bridges this gap by being both human and machine readable, while being flexible enough to support platform and architecture independent data interchange.
+      </p>
+
+      <h4>Supporting Technologies</h4>
+
+      <p>
+	For those of you wondering what you can do with XML, A broad range of technologies have been developed for doing just about anything with XML data, that includes any well formed XML, such as XHTML.</p>
+	<ul>
+          <li>
+	   You can specify it with a schema language such as <a href='http://www.w3.org/TR/xmlschema11-1/'>W3C XML Schema, <a href='http://relaxng.org/'>Relax NG</a> or <a href='http://www.schematron.com/'>Schematron</a>;</li>
+          <li>
+	    Persist it in a database such as <a href='http://www-01.ibm.com/software/data/db2/linux-unix-windows/xml/index.html'>IBM DB2</a> or <a href='http://www.oracle.com/technetwork/database/database-technologies/xmldb/overview/index.html'>Oracle XML DB</a>, in native form;</li>
+          <li>
+	    Search on it with <a href='http://www.w3.org/TR/css-2010/'>CSS</a>, <a href='http://www.w3.org/TR/domcore/'>DOM</a>, <a href='http://www.w3.org/TR/xpath-31/'>XPath</a> or <a href='http://www.w3.org/TR/xquery-31/'>XQuery</a>;</li>
+          <li>
+	    Transform it into another XML document, including XHTML, or change it to another format such as PDF, with <a href='http://www.w3.org/TR/2006/REC-xsl11-20061205/'>XSL</a>;</li>
+          <li>
+	    Qualify it with <a href='http://www.w3.org/TR/REC-xml-names/'>Namespace in XML</a> so  it can be embedded with other XML vocabularies.
+	  </li>
+        </ul>
+      <hr/>
+
+      <div sources=''>
+        <ul>
+          <li>Editor</li>
+          <li><a href='https://ccollins.wordpress.com/2008/03/03/a-brief-history-of-xml/'>A Brief History of XML</a>&mdash;Chris Collins</li>
+          <li><a href='http://www.ibm.com/developerworks/library/x-eleatt/'>Principles of XML design: When to use elements versus attributes</a>&mdash;IBM DeveloperWorks; 04 March 2004</li>
+        </ul>
+      <div class='reference'>
+        <ul>
+          <li><a href='http://www.w3.org/TR/2008/REC-xml-20081126/'>Extensible Markup Language (XML) 1.0 (Fifth Edition)</a>&mdash;26 November 2008</li>
+          <li><a href='http://www.w3.org/TR/2006/REC-xml11-20060816/'>Extensible Markup Language (XML) 1.1 (Second Edition)</a>&mdash;16 August 2006</li>
+          <li><a href='http://www.w3.org/TR/2004/REC-xml11-20040204/'>Extensible Markup Language (XML) 1.1</a>&mdash;04 February 2004</li>
+          <li><a href='http://www.w3.org/TR/REC-xml-names/#dt-expname'>Namespaces in XML 1.0 (Third Edition)</a>; 08 December 2009</li>
+          <li><a href='http://www.w3.org/TR/2006/REC-xml-names11-20060816/'>Namespaces in XML 1.1 (Second Edition)</a>&mdash;16 August 2006</li>
+          <li><a href='http://www.w3.org/TR/2006/REC-xml-names-20060816/'>Namespaces in XML 1.0 (Second Edition)</a>&mdash;16 August 2006</li>
+          <li><a href='http://www.cafeconleche.org/slides/xmlone/london2002/advancedxml/Advanced_XML_Programming.html'>Advanced XML Programming</a>&mdash;cafeconleche.org</li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='entity_reference'>entity reference <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        An <i>entity reference</i> refers to the content of a named entity.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#dt-entref'>W3C&mdash;&sect; 4.1 Character and Entity References</a>; Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='see-also'>
+        <a href='#character_reference'>character reference</a>
+      </p>
+      <p class='reference'>
+        <a href='#'></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008</li>
+          <li><a href=''></a>&mdash;</li>
+          <li><a href=''></a>&mdash;</li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_F'>F</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='Formal_Public_Identifier'>Formal Public Identifier <span class='unbold'></span><span id='' /><span class='unbold float-rt'></span></dt>
+    <dd>
+      <p>
+        A Formal Public Identifier (FPI) is a short piece of specially formatted text that may be used to uniquely identify a product, specification or document. One of their most common uses is as part of <a href='#document_type_declaration'>document type declaration</a>s. However, they are also used in the vCard and iCalendar formats to identify the software product that has generated data.</p>
+      <p class='note'>
+        More recently, URIs and UUIDs have surplanted the use of FPIs, which have become a legacy system.</p>
+      <p>
+        An FPI consists of two parts: the <i>owner identifier</i> which indicates the issuer of the FPI, and the <i>text identifier</i> which indicates the particular document or object the FPI identifies. The two parts are separated by a double slash.
+      </p>
+      
+      <p>
+        In the following example:
+      </p>
+<pre class='example'>
+"-//W3C//DTD HTML 4.01//EN"
+</pre>
+      <p>
+        the owner identifier is <code>-//W3C</code> and the text identifier is <code>DTD HTML 4.01//EN</code>.</p>
+      <p>
+        Owner identifiers that are prefixed with <code>-//</code> indicate unregistered owners. (The W3C is notable for not having registered its FPI name.) Registered identifiers are prefixed with <code>+//</code> and a small number of identifiers assigned by ISO do not require a prefix at all.</p>
+      <p>
+        Registered domain names may be used as owner identifiers. For example, the owner of <code>example.net</code> could issue FPIs using the owner identifier <code>+//IDN example.net</code>.</p>
+      <p>
+        Text identifiers can be broken down into the <i>class</i>, <i>description</i> and <i>language</i>. In this case the class is <code>DTD</code>, indicating that the FPI represents a document type definition; the description is <code>HTML 4.01</code>; and the language is <code>EN</code> which suggests that the document type definition is written in English (though documents conforming to the DTD do not need to be in English). The class is separated from the description using a space character; the description is separated from the language using a double slash. The text identifier may optionally contain a version indicator after the language, also separated by a double slash.
+      </p>
+      
+      <hr/>
+    
+      <footer>
+        <p class='source'>
+          <a href=''></a>&mdash;
+        </p>
+        <p class='cf'>
+          <a href='#'></a>
+        </p>
+        <p class='see'>
+          <a href='#'></a>
+        </p>
+        <p class='see-also'>
+          <a href='#'></a>
+        </p>
+        <p class='reference'>
+          <a href=''></a>&mdash;
+        </p>
+        <div class='reference'>
+          <ul>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+          </ul>
+        </div>
+      </footer>
+    </dd>
+
+    <dt id='FPI'>FPI <span class='unbold'></span><span id='' /></dt>
+    <dd>
+      <p>
+        See <a href='#Formal_Public_Identifier'>Formal Public Identifier</a>.
+      </p>
+
+      <hr/><br/>
+ 
+    </dd>
+
+</dl>
+
+<h3 id='index_G'>G</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_H'>H</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_I'>I</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='ID'>ID <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#tokenized_type'>tokenized type</a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='IDREF'>IDREF <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#tokenized_type'>tokenized type</a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='IDREFS'>IDREFS <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#tokenized_type'>tokenized type</a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='Infoset'>Infoset <span class='unbold'></span><span id='infoset'/><span id='information_set'/></dt>
+    <dd>
+      <p>
+        See <a href='#XML_Information_Set'>XML Information Set</a>
+      </p>
+
+      <hr/>
+
+    </dd>
+
+</dl>
+
+<h3 id='index_J'>J</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_K'>K</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_L'>L</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl> comment, document type declaration, PI, XML decl, 
+
+<h3 id='index_M'>M</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='markup'>markup <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        Markup takes the form of <a href='#start-tag'>start-tag</a>s, <a href='#end-tag'>end-tag</a>s, <a href='#empty-element_tag'>empty-element tag</a>s, <a href='#entity reference'>entity reference</a>s, <a href='#character_reference'>character reference</a>s, <a href='#comment'>comment</a>s, <a href='#CDATA_section_delimiter'>CDATA section delimiter</a>s, <a href='#document_type_declaration'>document type declaration</a>s, <a href='#processing_instruction'>processing instruction</a>s, <a href='#XML_declaration'>XML declaration</a>s, <a href='#text_declaration'>text declaration</a>s, and any <a href='#white space'>white space</a> that is at the top level of the <a href='#document_entity'>document entity</a> (that is, outside the <a href='#document_element'>document element</a> and not inside any other markup).
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='cf'>
+        <a href='#character_data'>character data</a>
+      </p>
+      <p class='see'>
+        <a href='#text'>text</a>
+      </p>
+    </dd>
+
+    <dt id='markup_declaration'>markup declaration <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        A <i>markup declaration</i> is an <a href='#element_type_declaration'>element type declaration</a>, an <a href='#attribute-list_declaration'>attribute-list declaration</a>, an <a href='#entity_declaration'>entity declaration</a>, or a <a href='#notation_declaration'>notation declaration</a>. These declarations may be contained in whole or in part within <a href='#parameter_entity'>parameter entities</a>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-prolog-dtd'>W3C&mdash;&sect; 2.8 Prolog and Document Type Declaration</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_N'>N</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='name_character'>name character <span class='unbold'>  NameChar</span><span id=''/></dt>
+    <dd>
+      <p>
+        A name character is defined by the <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameChar'><code>NameChar</code></a> production.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        Editor
+      </p>
+      <p class='cf'>
+        <a href='#Name'><code>Name</code></a>
+      </p>
+      </div>
+    </dd>
+
+    <dt id='NMTOKEN'>NMTOKEN <span class='unbold'> </span><span id=''/></dt>
+    <dd>
+      <p>
+        <code>NMTOKEN</code> is a tokenized attribute type and is specified in an <a href='#attribute-list_declaration'>Attribute-list declaration</a>.
+      <p>
+	The value of an attribute declared to have type <code>NMTOKEN</code> is an <a href='XML_name_token'>XML name token</a>. For example, if you knew that the year attribute of a <code>journal</code> element should contain an integer such as 1990 or 2015, you might declare it to be a </code>NMTOKEN</code>, since all year designations conform to this type.
+      </p>
+<pre class='example'>
+&lt;!ATTLIST journal year NMTOKEN #REQUIRED&gt;
+</pre>
+      <p class='note'>
+	This still doesn't prevent a document author from assigning values like "99" or "March", but it does eliminate entries that contain whitespace such as "1990 C.E." or "Sally had a little lamb."
+      </p>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#tokenized_type'>tokenized type</a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='NMTOKENS'>NMTOKENS <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#tokenized_type'>tokenized type</a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='Nmtoken'>Nmtoken <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        A Nmtoken (name token) is any mixture of name characters.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='notation'>notation <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        A <i>notation</i> identifies by name the format of an <a href='unparsed_entity'>unparsed entity</a>, the format of an element which bear a <a href='#notation_attribute'>notation attribute</a>, or the application to which a <a href='#processing_instruction'>processing instruction</a> is addressed. A notation is declared in a <a href='notation_declaration'>notation declaration</a>. 
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://www.w3.org/TR/2008/PER-xml-20080205/#Notations'>4.7 Notation Declarations</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='see'>
+        <a href='#enumerated_type'>enumerated type</a>
+      </p>
+    </dd>
+
+    <dt id='numeric_character_reference'>numeric character reference <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        A numeric character reference refers to a character by its Universal Character Set/Unicode <i>code point</i>, and uses the format:
+<pre class='example'>
+&#nnnn;
+</pre>
+      <p>
+	or
+      </p>
+<pre class='example'>
+&#xhhhh;
+</pre>
+      <p>
+	where <code>nnnn</code> is the code point in decimal form, and <code>hhhh</code> is the code point in hexadecimal form. The <code>x</code> must be lowercase in XML documents. The <code>nnnn</code> or <code>hhhh</code> may be any number of digits and may include leading zeros. The <code>hhhh</code> may mix uppercase and lowercase, though uppercase is the usual style.
+      <p>
+	In contrast, a <a href='#character_entity_reference'>character entity reference</a> refers to a character by the name of an entity which has the desired character as its replacement text. The entity must either be predefined (built into the markup language) or explicitly declared in a Document Type Definition (DTD). The format is the same as for any entity reference:
+      </p>
+<pre class='example'>
+&name;
+</pre>
+      <p>
+	where name is the case-sensitive name of the entity. The semicolon is required.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references'>Character reference overview</a>&mdash;Wikipedia
+      </p>
+      <p class='cf'>
+        <a href='#character_entity_reference'>character entity reference</a>
+      </p>
+    </dd>
+
+</dl>
+
+<h3 id='index_O'>O</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_P'>P</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='parsed entity'> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        A parsed entity contains <a href='#text'><i>text</i></a>, a sequence of characters, which may represent <a href='#markup'>markup</a> or <a href='#character_data'>character data</a>
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <p class='reference'>
+        <a href='#'></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008</li>
+          <li><a href=''></a>&mdash;</li>
+          <li><a href=''></a>&mdash;</li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='parser'>parser <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p cite='http://xml.silmaril.ie/parsers.html'>
+        Parsing is the act of splitting up information into its component parts.</p>
+      <p cite='Editor'>
+        With respect to XML, an XML parser is a software library or API that is integrated or embeded into an application program (command line or GUI) which is used to analyse an XML byte stream or file. Most modern XML parsers support the majority of XML related recommendations or standards such as XML Schema, Namespaces, XPath and XQuery. XML parsers fall into two categories; stream based (SAX) and tree based (DOM). 
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        Editor
+      </p>
+    </dd>
+
+    <dt id='PCDATA'>PCDATA <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        Parsed Character Data (PCDATA) is a data definition that originated in Standard Generalized Markup Language (SGML), and is used also in Extensible Markup Language (XML) Document Type Definition (DTD) to designate mixed content XML elements.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://en.wikipedia.org/wiki/PCDATA'></a>&mdash;Wikipedia
+      <div class=''>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <p class='reference'>
+        <a href='#'></a>
+      </p>
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a>&mdash;XML Path Language (XPath) 1.0; 16 November 1999</li>
+          <li><a href=''></a>&mdash;XML Path Language (XPath) 2.0 (Second Edition); 14 December 2010</li>
+          <li><a href=''></a>&mdash;XML Path Language (XPath) 3.0; 08 April 2014</li>
+          <li><a href=''></a>&mdash;XML Path Language (XPath) 3.1; 18 December 2014</li>
+          <li><a href=''></a>&mdash;XQuery and XPath Data Model 3.1; 18 December 2014</li>
+          <li><a href=''></a>&mdash;XPath and XQuery Functions and Operators 3.1; 18 December 2014
+          <li><a href='http://www.w3.org/TR/xpath-31/'>XML Path Language (XPath) 3.1</a></li>
+          <li><a href='http://www.w3.org/TR/xpath-functions-31/'>XPath and XQuery Functions and Operators 3.1</a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='processing_instruction'>processing instruction <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        Processing instructions (PIs) allow documents to contain instructions for applications. A processing instruction takes the form:
+      </p>
+<pre class='example'>
+&lt;?PITarget PIContent?&gt;
+</pre>
+      <p>
+	The <a href='http://www.w3.org/TR/xml/#NT-PITarget'><code>PITarget</code></a> is used to identify the application to which the instruction is directed and <code>PIContent</code> is free form text send to the application. For example:
+      </p>
+<pre class='example'>
+1. &lt;?sort alpha-ascending?&gt;
+
+2. &lt;?word document="test.doc"?&gt;
+
+3. &lt;xml-stylesheet href="classic.xsl" type="text/xml"&gt;
+</pre>
+      <p class='note'>
+	PIs are not part of the document's <a href='#character_data'>character data</a>, but must be passed through to the application.
+      </p>
+
+      <p class='source'>
+        <a href='http://www.w3.org/TR/xml/#sec-pi'>2.6 Processing Instructions</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 26 November 2008
+      </p>
+    </dd>
+
+    <dt id='prolog'>prolog <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        An XML prolog may contain an <a href='#XML_declaration'>XML declaration</a>, <a href='#document_type_declaration'>document type declaration</a>, and any number of <a href='#comment'>comment</a> and <a href='#processing_instruction'>processing instruction</a>.</p>
+      <p class='note'>
+	An XML document does not require a prolog to be well-formed. However, a docment type declaration is required for validation.
+      </p>
+
+      <p class='source'>
+        Editor
+      </p>
+      <div class='see-also'>
+        <ul>
+          <li><a href='#XML_declaration'>XML declaration</a></li>
+          <li><a href='#document_type_declaration'>document type declaration</a></li>
+          <li><a href='#comment'>comment</a></li>
+          <li><a href='#processing_instruction'>processing instruction</a></li>
+        </ul>
+      </div>
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/xml/#sec-prolog-dtd'>2.8 Prolog and Document Type Declaration</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 26 November 2008
+      </p>
+    </dd>
+
+  </dl>
+
+<h3 id='index_Q'>Q</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='qualified_name'>qualfied name <span class='unbold'>  QName</span><span id=''/></dt>
+    <dd>
+      <p>
+        A qualified name is a prefixed element or attribute name (aka, local name) where the prefix has been associated with a namespace via an <code>xmln</code> declaration. The prefix and the local name must match the production for a non-colonized name (<a href='http://www.w3.org/TR/REC-xml-names/#NT-NCName'><code>NCName</code></a>) and is separated from the local name with a colon. A name so constructed is called <i>colonized name</i>.</p>
+      <p>
+	Qualified names were introduced by <a href='http://www.w3.org/TR/REC-xml-names/'>XML Namespaces</a>. They were defined for element and attribute names (only) and provide a mechanism for concisely identifying a {URI, local-name} pair. For example, in the following document:
+      </p>
+<pre class='example'>
+&lt;?xml version='1.0'?&gt;
+&lt;doc xmlns:x="http://example.com/ns/foo"&gt;
+  &lt;x:p/&gt;
+&lt;/doc&gt;
+</pre>
+      <p>
+	The <a href='http://www.w3.org/TR/REC-xml-names/#NT-QName'><code>QName</code></a> "<code>x:p</code>" is a concise, unambiguous name for the {URI, local-name} pair {"<code>http://example.com/ns/foo</code>", "<code>p</code>"}.</p>
+      <p>
+	When used solely in element and attribute names, all QNames are identified by the XML processor and can logically be replaced by the URI/local-name pair they identify.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://www.w3.org/2001/tag/doc/qnameids-2004-03-17#sec-qnames-xml'>Using Qualified Names (QNames) as Identifiers in XML Content</a>&mdash;17 March 2004 (TAG Finding)
+      </p>
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/REC-xml-names/#NT-QName'>Namespaces in XML 1.0 (Third Edition)</a>&mdash;8 December 2009 (Rec)
+      </p>
+    </dd>
+
+</dl>
+
+<h3 id='index_R'>R</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='root_element'>root element <span class='unbold'></span><span id='' /><span class='unbold float-rt'></span></dt>
+    <dd>
+      <p>
+        There is exactly one element, called the root, or document element, no part of which appears in the <a href='#content'>content</a> of any other element. For example, the root element in all HTML documents is <code>html</code>. In an XML document, the root element is specified by the author and indicated with the <a href='document_type_declaration'>document type declaration</a>.</p>
+      <p class='note'>
+        For all other elements, if the <a href='#start-tag'>start-tag</a> is in the content of another element, the <a href='#end-tag'>end-tag</a> is in the content of the same element. More simply stated, the elements, delimited by start and end tags, nest properly within each other.
+      </p>
+    
+      <hr/>
+    
+      <footer>
+        <p class='source'>
+          <a href='https://www.w3.org/TR/2008/REC-xml-20081126/#sec-well-formed'>2.1 Well-Formed XML Documents</a>&mdash;Extensible Markup Language 1.0 (Fifth Edition)
+        </p>
+      </footer>
+    </dd>
+
+</dl>
+
+<h3 id='index_S'>S</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='start-tag'>start-tag <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        A <i>start tag</i> is defined by the XML production for <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#NT-STag'><code>[40] STag</code></a>. It consists of the opening delimiter: <code>&lt;</code>, followed by a name specifying the element's type, one or more attributes, and the closing delimter: <code>&gt;</code>. The beginning of every non-empty XML element is marked by a <i>start-tag</i>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        Editor
+      </p>
+      <p class='cf'>
+        <a href='#end-tag'>end-tag</a>
+      </p>
+      <p class='see'>
+        <a href='#markup'>markup</a>
+      </p>
+      <p class='see-also'>
+        <a href='#empty-element_tag'>empty-element tag</a>
+      </p>
+      <p class='reference'>
+        <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#dt-stag'>W3C&mdash;&sect; 3.1 Start-Tags, End-Tags, and Empty-Element Tags</a> ;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+    </dd>
+
+    <dt id='string_type'>string type <span class='unbold'>  StringType</span><span id=''/></dt>
+    <dd>
+      <p>
+        The string type, one of three kinds of <a href='#attribute_type'>attribute type</a>, is used in an <a href='#attribute-list_declaration'>Attribute-list declaration</a> to constrain the type of an attribute value to character data. The production reads simply:
+      </p>
+<pre class='example'>
+StringType  ::=  'CDATA'
+</pre>
+      <p>
+        A <code>CDATA</code> attribute value can contain any string of text acceptable in a well-formed XML attribute value. This is the most general attribute type. For example, you would use this type for an <a href='http://www.w3.org/TR/html5/embedded-content-0.html#alt'><code>alt</code></a> attribute of an image element because there's no particular form the text in such an attribute has to follow.
+      </p>
+<pre class='example'>
+&lt;!ATTLIST image alt CDATA #IMPLIED&gt;
+</pre>
+      <p>
+        You would also use the CDATA <a href='#string_type'>string type</a> for other kinds of data such as prices, URIs, email and snail mail addresses, citations, and other types that--while they have more structure than a simple string of text--don't match any of the other attribute types. For example:
+      </p>
+<pre class='example'>
+&lt;!ATTLIST sku
+ list_price             CDATA #IMPLIED
+ suggested_retail_price CDATA #IMPLIED
+ actual_price           CDATA #IMPLIED
+&gt;
+&lt;!-- All three attributes should be in the form $XX.YY --&gt;
+</pre>
+
+      <p class='source'>
+        Editor
+      </p>
+      <div class='cf'>
+        <ul>
+          <li><a href='#enumerated_type'>enumerated type</a></li>
+          <li><a href='#tokenized_type'>tokenized type</a></li>
+        </ul>
+      </div>
+      <p class='see'>
+        <a href='#attribute_type'>attribute type</a>
+      </p>
+      <p class='see-also'>
+        <a href='CDATA'>CDATA</a>
+      </p>
+      <p class='reference'>
+	<a href='http://www.w3.org/TR/2008/PER-xml-20080205/#sec-attribute-types'>3.3.1 Attribute Types</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+    </dd>
+
+  </dl>
+
+<h3 id='index_T'>T</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='text'>text <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        Text consists of intermingled <a href='#character_data'>character data</a> and <a href='#markup'>markup</a>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='https://www.w3.org/TR/2008/PER-xml-20080205/#syntax'>2.4 Character Data and Markup</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='character_data'>character data</a></li>
+          <li><a href='markup'>markup</a></li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='token'>token <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+	In general, a <i>token</i> is an object that represents something else, such as another object (either physical or virtual), or an abstract concept. For example, a gift is sometimes referred to as a token of the giver's esteem for the recipient. In computers, there are a number of types of tokens.</p>
+      <p>
+        In the context of computers, a software program that converts the syntactic units (lexemes) of a data stream into tokens is called a tokenizer. Programming language compilers and internet browsers are examples of such programs.</p>
+      <p class='note'>
+	Some authors use the word 'token' interchangeably to refer to both the syntactic units (lexemes) being processed and the resulting output of their tokenization.
+      <p>
+	A compiler breaks the source code of a programming language into one of five classes of tokens (constants, identifiers, operators, reserved words, and separators), for the purpose of validating that the source code was written in accordance with the rules of the programming language and to convert the source code into a 'machine language' representation that can be used by a microprocessor to fullfil its intended purpose.</p>
+      <p>
+	 In a token ring network, the presence of a token (which is simply a particular bit setting) in a continually circulating transmission stream allows a device to change the bit setting (thus taking the token) and put a message in its place. The receiver of the message elsewhere in the token ring network removes the message and resets the bit setting (thus putting the token back) so that someone else in the ring of devices will be able to have a turn at using that message space.</p>
+      <p>
+	A security token is a physical device, such as a special smart card , that together with something that a user knows, such as a PIN , will enable authorized access to a computer system or network.
+      </p>
+
+      <hr/>
+
+      <div class='sources'>
+        <ul>
+          <li><a href='http://whatis.techtarget.com/definition/token'>token</a>&mdash;techtarget.com</li>
+          <li><a href='http://en.wikipedia.org/wiki/Lexical_analysis#Token'>token</a>&mdash;Wikipedia</li>
+        </ul>
+      </div>
+    </dd>
+
+    <dt id='tokenized_type'>tokenized type <span class='unbold'>  <code>TokenizedType</code></span><span id=''/></dt>
+    <dd>
+      <p>
+        An <a href='#attribute_type'>attribute type</a> declared in a <a href'#DTD'>DTD</a> to be a single word, or <i>token</i>, or a list of tokens. There are seven tokenized types: <a href='#ID'><code>ID</code></a>, <a href='#IDREF'><code>IDREF</code></a>, <a href='#IDREFS'><code>IDREFS</code></a>, <a href='#ENTITY'><code>ENTITY</code></a>, <a href='#ENTITIES'><code>ENTITIES</code></a>, <a href='#NMTOKEN'><code>NMTOKEN</code></a>, and <a href='#NMTOKENS'><code>NMTOKENS</code></a>.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        Editor
+      </p>
+      <p class='see'>
+        <a href='#attribute_type'>attribute type</a>
+      </p>
+    </dd>
+
+  </dl>
+
+<h3 id='index_U'>U</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_V'>V</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_W'>W</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_X'>X</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id='XML_declaration'>XML declaration <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        The XML declaration identifies the document as being XML and may also provide the version of XML and the character encoding of the document to the processor. For example:
+      </p>
+<pre class='example'>
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+</pre>
+      <p>
+	All XML documents should begin with an XML declaration.</p>
+      <p class='note'>
+	The XML Declaration at the beginning of an XML document is not a processing instruction, however its similar syntax has often resulted in it being referred to as a processing instruction.
+      </p>
+
+      <p class='source'>
+        <a href='http://xmlwriter.net/xml_guide/xml_declaration.shtml'>XML Declaration</a>&mdash;xmlwriter.net
+      </p>
+      <p class='see'>
+        <a href='#prolog'>prolog</a>
+      </p>
+      <p class='reference'>
+        <a href='http://www.w3.org/TR/xml/#sec-prolog-dtd'>2.8 Prolog and Document Type Declaration</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 26 November 2008
+      </p>
+    </dd>
+
+    <dt id='XML_Infoset'>XML Infoset <span class='unbold'></span><span id='infoset'/></dt>
+    <dd>
+      <p>
+        See <a href='#XML_Information_Set'>XML Information Set</a>
+      </p>
+
+      <hr/>
+
+    </dd>
+
+    <dt id='XML_Information_Set'>XML Information Set <span class='unbold'>  infoset</span><span id=''/></dt>
+    <dd>
+      <p>
+        XML Information Set (XML Infoset) is a W3C specification describing an abstract data model of an XML document in terms of a set of information items.[1] The definitions in the XML Information Set specification are meant to be used in other specifications that need to refer to the information in a well-formed XML document.
+      <p>
+        An XML document has an information set if it is well-formed and satisfies the namespace constraints. There is no requirement for an XML document to be valid in order to have an information set.
+      <p>
+	The motivation for the infoset was the debate over what to include in defining the tree model. The debate arises partly because there are two kind of application. Applications that want only to extract the information content of the document are usually interested only in the core information content. Applications such as XML Editing tools, on the other hand, tend also to be interested in details of how the XML was written, such as the choice of white space and quote characters used, and the ordering of attributes, so when the XML is displayed it conforms to what was actually written. In areas where the specification was silent, different standards made their own implementation decisions.</p>
+      <p>
+	To resolve these discrepencies and get some commonality across the different standards, the W3C defined a common model of the information in an XML document: the so-called XML Information Set (or infoSet, as it is often refered to).
+      <p>
+	The XML Information Set as finally defined includes 17 different information items, listed below. In earlier drafts of the specification, some of these were classified as core information items, and others, by implicaion, as non-core. This classification proved too controversial, because it disappeared in the final version of the specification. However, some may find it interesting to look back at the drafts to see how they classified different features.</p>
+      <p>
+        The 17 kinds of information item are as follows:</p>
+        <ul>
+          <li>
+	    <i>Originally defined as core:</i> Document, Element, Attribute, Processing Instruction, Unexpanded Entity, Character, Notation, Namespace Declaration.</li>
+	  <li>
+	    <i>Originally defined as non-core:</i> Comment, DocumentType Declaration, Internal Entity, External Entity, Unparsed Entity, Enity Start Marker, Entity End Marker, CDATA start marker, CDATA End Marker.
+	  </li>
+	</ul>
+      <p class='note'>
+	Another attempt to define the core information content of an XML document appears in the specification of Canonical XML (<a href='http://www.w3.org/TR/xml-c14n'>http://www.w3.org/TR/xml-c14n</a>). This specification approaches the question from a different angle: it tries to define rules for deciding when two lexically different XML documents have the same information content, that is, are equivalent. To do this, it defines a transformation that can be applied to any XML document to turn it into canonical form. However, this specification has gray areas too (see entry at <a href='canonical'>canonical</a>).</p>
+      <p>
+        The following figure illustrates the resulting classificaion: the central core is information that is retained in canonical form; the "peripheral" ring is information that is present in the Infoset but not in canoncal XML; while the outer ring represents feaures of an XML doducment that are excluded from the information set entirely.</p>
+      <div>
+        <img src="./images/infoset.png">
+      </div>
+      <p>
+	Finnaly, some question whether the XML Information Set was a good idea in the first place, suggesting it to be a perversion of one of the main tenants of XML; well-formedness. Walter Perry on the <code>xml-dev</code> mailing list had this to say:</p>
+      <p class='quote'>
+        The Infoset is the unfortunate standard to which those in retreat from the radical and most useful implications of well-formedness have rallied. At its core the Infoset insists that there is 'more' to XML than the straightforward syntax of well-formedness. By imposing its canonical semantics the Infoset obviates the infinite other semantic outcomes which might be elaborated in particular unique circumstances from an instance of well-formed XML 1.0 syntax. The question we should be asking is not whether the Infoset has chosen the correct canonical semantics, but whether the syntactic possibilities of XML 1.0 should be curtailed in this way at all.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href='http://books.google.com/books?id=Xw3_tzEJVEwC&pg=PA55&source=gbs_selected_pages&cad=2#v=onepage&q&f=false'>XPath 2.0 Programmer's Reference</a> , (page 54) by Michael Kay&mdash; Wiley Publishing, Inc.
+      </p>
+      <p class='cf'>
+        <a href='#canonical'>canonical</a>
+      </p>
+    </dd>
+
+    <dt id='XML_name'>XML name <span class='unbold'>  <code>Name</code></span><span id='Name'/></dt>
+    <dd>
+      <p>
+	An XML name is a sequence of characters constrained by the <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Name'><code>Name</code></a> production. It is a <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Nmtoken'><code>Nmtoken</code></a> with a restricted set of initial characters.</p>
+
+      <h3>Start Character</h3>
+
+<!-- Block range U+0000..U+007F -->
+
+      <p>
+	<b>Basic Latin (ASCII)</b><p>
+      <div class='indent_2pct'>
+        <p>
+	  Support for English, French, Spanish, German, and Vietnamese languages.</p>
+        <p>
+<pre class='example'>
+":" | [A-Z] | "_" | [a-z]
+</pre>
+        <p>
+          Colon, underscore, and the upper and lower case letters in the ISO <a href='http://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)'>basic Latin</a> alphabet.
+        </p>
+      </div>
+
+<!-- Block range U+0080..U+00FF -->
+
+      <p>
+	<b>&#192; <span style='padding-left: 10px; padding-right: 10px;'>&ndash;</span> &#214;</b>
+      </p>
+      <div class='indent_2pct'>
+        <p>
+	  Latin capital letter A with grave through Latin capital letter O with diaeresis.
+        </p>      
+<pre class='example'>
+[#xC0-#xD6]
+</pre>
+        <p>
+	  <a href='http://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)'>Latin-1 Supplement (Unicode block)</a>. Support for French, German, Spanish, Icelandic, and Vietnamese languages.
+        </p>
+      </div>
+
+      <p>
+	<b>&Oslash; <span style='padding-left: 10px; padding-right: 10px;'>&ndash;</span> &ouml;</b>
+      </p>
+      <div class='indent_2pct'>
+        <p>
+	  Latin Capital letter O with stroke through Latin small letter o with diaeresis
+        </p>    
+<pre class='example'>
+[#xD8-#xF6]
+</pre>
+        <p>
+	  <a href='http://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)'>Latin-1 Supplement (Unicode block)</a>. Support for French, German, Spanish, Icelandic, and Vietnamese languages.
+        </p>
+      </div>
+
+<!-- Block ranges U+0080..U+00FF, U+0100..U+017F, U+0180..U+024F, U+0250..U+02AF, and U+02B0..U+02FF
+
+
+ -->
+      <p>
+	<b>&oslash; <span style='padding-left: 10px; padding-right: 10px;'>&ndash;</span> &#767;</b>
+      <p>
+      <div class='indent_2pct'>
+        <p>
+	  Latin small letter o with stroke through modifier letter low left arrow.
+        </p>
+<pre class='example'>
+[#xF8-#x2FF]
+</pre>
+        <p>
+	  This range spans 5 Unicode blocks:</p>
+          <ul>
+	    <li>
+	      <a href='http://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)'>Latin-1 Supplement</a> (French, German, Spanish, Icelandic, and Vietnamese languages).</li>
+	    <li>
+	      <a href='http://en.wikipedia.org/wiki/Latin_Extended-A'>Latin Extended-A</a> (Latin, Czech, Dutch, Polish, and Turkish languages).</li>
+	    <li>
+	      <a href='http://en.wikipedia.org/wiki/Latin_Extended-B'>Latin Extended-B</a> (Africa alphabet, Pan-Nigerian, Americanist, Khoisan, Pinyin, and Romanian languages).</li>
+	    <li>
+	      <a href='http://en.wikipedia.org/wiki/IPA_Extensions'>IPA Extensions</a> (full size letters used in the International Phonetic Alphabet).</li>
+	    <li>
+	      <a href='http://en.wikipedia.org/wiki/Spacing_Modifier_Letters'>Spacing Modifier Letters</a> (characters for the IPA, UPA, and other phonetic transcriptions).
+	    </li>
+          </ul>
+      </div>
+
+      <p>
+	<img width='29px' height='38px' src='./images/Greek-Heta.png'/> <b style='position: relative; bottom: 15px; padding: 0;'>&ndash;</b> <img width='29px' height='38px'' src='./images/Greek-small reversed dotted lunate sigma symbol.png'/>
+      <p>
+      <div class='indent_2pct'>
+        <p  style='margin-top: -20px;'>
+          Greek capitol letter Heta through Greek small reversed dotted lunate sigma symbol.
+        </p>
+<pre class='example'>
+[#x370-#x37D]
+</pre>
+        <p>
+	  Greek and Coptic Unicode block.
+        </p>
+      </div>
+
+      <p>
+	<img width='29px' height='38px' src='./images/Greek-Jot.png'/> <b style='position: relative; bottom: 15px; padding: 0;'>&ndash;</b> <img width='29px' height='38px'' src='./images/Greek-Dasia.png'/>
+      <p>
+      <div class='indent_2pct'>	
+	<p>
+          Greek capital letter Yot through Greek letter Dasia.
+        </p>
+<pre class='example'>
+[#x37F-#x1FFF]
+</pre>
+        <p>
+	  This range cuts across the following 61 code blocks: Arabic, Arabic Extended-A, Arabic Supplement, Armenian, Balinese, Batak, Bengali, Buginese, Buhid, Cherokee, Combining Diacritical Marks Extended, Combining Diacritical Marks Supplement, Cyrillic, Cyrillic Supplement, Devanagari, Ethiopic, Ethiopic Supplement, Georgian, Greek and Coptic, Greek Extended, Gujarati, Gurmukhi, Hangul Jamo, Hanunoo, Hebrew, Kannada, Khmer, Khmer Symbols, Lao, Latin Extended Additional, Lepcha, Limbu, Malayalam, Mandaic, Mongolian, Myanmar, New Tai Lue, NKo, Ogham, Ol Chiki, Oriya, Phonetic Extensions, Phonetic Extensions Supplement, Runic, Samaritan, Sinhala, Sundanese, Sundanese Supplement, Syriac, Tagalog, Tagbanwa, Tai Le, Tai Tham, Tamil, Telugu, Thaana, Thai, Tibetan, Unified Canadian Aboriginal Syllabics, Unified Canadian Aboriginal Syllabics Extended, and Vedic Extensions.
+        </p>
+      </div>
+
+      <p>
+	<b></b>
+      <p>
+      <div class='indent_2pct'>
+        <p>
+	
+        </p>
+<pre class='example'>
+[#x200C-#x200D]
+</pre>
+        <p>
+	
+        </p>
+      </div>
+
+      <p>
+	<b></b>
+      <p>
+      <div class='indent_2pct'>	
+	<p>
+	
+        </p>
+<pre class='example'>
+[#x2070-#x218F]
+</pre>
+        <p>
+	
+        </p>
+      </div>
+
+      <p>
+	<b></b>
+      <p>
+      <div class='indent_2pct'>
+	<p>
+
+        </p>
+<pre class='example'>
+[#x2C00-#x2FEF]
+</pre>
+        <p>
+	
+        </p>
+      </div>
+
+      <p>
+	<b></b>
+      <p>
+      <div class='indent_2pct'>	
+	<p>
+		
+        </p>
+<pre class='example'>
+[#x3001-#xD7FF]
+</pre>
+        <p>
+	
+        </p>
+      </div>
+
+      <p>
+	<b></b>
+      <p>
+      <div class='indent_2pct'>	
+	<p>
+			
+        </p>
+<pre class='example'>
+[#xF900-#xFDCF]
+</pre>
+        <p>
+	
+        </p>
+      </div>
+
+      <p>
+	<b></b>
+      <p>
+      <div class='indent_2pct'>	
+	<p>
+		
+        </p>
+<pre class='example'>
+[#xFDF0-#xFFFD]
+</pre>
+        <p>
+	
+        </p>
+      </div>
+
+      <p>
+	<b></b>
+      <p>
+      <div class='indent_2pct'>	
+	<p>
+		
+        </p>
+<pre class='example'>
+[#x10000-#xEFFFF]
+</pre>
+        <p>
+	
+        </p>
+      </div>
+
+	, ideogram or underscore, and continuing with letters, digits, hyphens, underscores, colons, or full stops; together known as <a href='name_character'>name character</a>s.</p>
+      <p>
+	Names beginning with the string " xml ", or with any string which would match (('X'|'x') ('M'|'m') ('L'|'l')), are reserved for standardization of the XML specification.</p>
+      <p>
+	XML names are used for element names, attribute names, processing instruction targets, entity names, notation names, and the values of attributes of type ID.
+      </p>
+
+      <hr/>
+
+      <div class='sources'>
+        <ul>
+          <li><a href='http://www.w3.org/TR/2008/REC-xml-20081126/#sec-common-syn'>2.3 Common Syntactic Constructs</a>&mdash;Extensible Markup Language (XML) 1.0 (Fifth Edition); 05 February 2008</li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+      <p class='cf'>
+        <a href='#Nmtoken'></a>
+      </p>
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+      <p class='reference'>
+        <a href='http://www.xml.com/pub/a/2001/07/25/namingparts.html'>The Naming of Parts</a>&mdash;xml.com
+      </p>
+    </dd>
+
+    <dt id='XML_name_token'>XML name token <span class='unbold'>  <code>NmToken</code></span><span id='NmToken'/></dt>
+    <dd>
+      <p>
+        An XML name token is a sequence of characters constrained by the <a href='http://www.w3.org/TR/2008/REC-xml-20081126/#NT-NmToken'><code>NmToken</code></a> production.
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        Editor
+      </p>
+      <p class='cf'>
+        <a href='#Name'><code>Name</code></a>
+      </p>
+      </div>
+    </dd>
+
+  </dl>
+
+<h3 id='index_Y'>Y</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<h3 id='index_Z'>Z</h3>
+
+  <dl class='indent_2pct'>
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        
+      </p>
+
+      <hr/>
+
+      <p class='source'>
+        <a href=''></a>
+      </p>
+
+      <div class='sources'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <p class='cf'>
+        <a href='#'></a>
+      </p>
+
+      <div class='cf'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <p class='see'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='see-also'>
+        <a href='#'></a>
+      </p>
+
+      <div class='see-also'>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+      </div>
+
+      <p class='reference'>
+        <a href=''></a>
+      </p>
+
+      <div class='reference'>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+    </dd>
+
+</dl>
+
+<br/>
+
+<h2 id='xs_resources'>Resources</h2>
+<ul>
+  <li><a href='http://www.w3.org/XML/Schema#usage'>Applications</a>
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Best Practices
+    <ul>
+      <li><a href='http://www.cafeconleche.org/books/xmljava/'>Processing XML with Java</a>&mdash;Elliot Rusty Harold; 2001, 2002</li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Books
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Editors
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Formatters/Viewers
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Glossaries
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li><a href='http://www.w3.org/XML/Schema#usage'>Presentations, guides, and tutorials</a>
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>Portals
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li><a href='http://www.w3.org/XML/Schema#dev'>Specifications and Development</a></li>
+  <li><a href='http://www.w3.org/XML/Schema#dev'>Submissions</a></li>
+  <li><a href='http://www.w3.org/XML/Schema#Tools'>Tools</a></li>
+  <li>Tutorials
+    <ul>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+      <li><a href=''></a></li>
+    </ul>
+  </li>
+  <li>XML Schema Reference
+    <ul>
+      <li><a href='https://www.evolveum.com/downloads/midpoint/1.9/midpoint-xsddocs-1.9/schemas/XMLSchema_xsd/'>www.evolveum.com</a>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</body>
+
+</html>

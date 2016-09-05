@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang='en'>
+
+<head>
+
+  <title>getElementById</title>
+
+  <meta charset='UTF-8' />
+
+  <meta name='description' content='' />
+
+  <meta name='keyword' content='' />
+
+  <meta name='robots' content='index, follow' />
+
+  <script>
+  
+
+  </script>
+
+</head>
+
+<body>
+
+  <p>
+      The <code>getElementByTagName</code> method returns a <code>NodeList</code> of all elements in the document with the specified element name, in the order in which they would be encountered in a preorder traversal of the Element tree.</p>
+  <p>
+      For example, this HTML page contains two paragraph elements within the body element. The following code will produce a node list of these two paragraphs:
+  </p> 
+<pre>
+var nl = document.getElementsByTagName("p");    
+</pre>
+
+  <div id='out'>
+          
+  </div>
+  
+  <script>
+  
+    var d = document;
+    
+    var nl = document.getElementsByTagName("p");
+    
+    var output = d.getElementsById("out");
+    
+    console.log(nl.length);
+    
+  </script>
+  
+</body>
+
+</html>

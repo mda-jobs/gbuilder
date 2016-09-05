@@ -1,0 +1,97 @@
+<angle> | [[ left-side | far-left | left | center-left | center | center-right | right | far-right | right-side ] || behind ] | leftwards | rightwards | inherit
+scroll | fixed | inherit
+<color> | transparent | inherit
+<uri> | none | inherit
+[ [ <percentage> | <length> | left | center | right ] [ <percentage> | <length> | top | center | bottom ]? ] | [ [ left | center | right ] || [ top | center | bottom ] ] | inherit
+repeat | repeat-x | repeat-y | no-repeat | inherit
+['background-color' || 'background-image' || 'background-repeat' || 'background-attachment' || 'background-position'] | inherit
+collapse | separate | inherit
+[ <color> | transparent ]{1,4} | inherit
+<length> <length>? | inherit
+<border-style>{1,4} | inherit
+[ <border-width> || <border-style> || 'border-top-color' ] | inherit
+<color> | transparent | inherit
+<border-style> | inherit
+<border-width> | inherit
+<border-width>{1,4} | inherit
+[ <border-width> || <border-style> || 'border-top-color' ] | inherit
+<length> | <percentage> | auto | inherit
+top | bottom | inherit
+none | left | right | both | inherit
+<shape> | auto | inherit
+<color> | inherit
+normal | none | [ <string> | <uri> | <counter> | attr(<identifier>) | open-quote | close-quote | no-open-quote | no-close-quote ]+ | inherit
+[ <identifier> <integer>? ]+ | none | inherit
+<uri> | none | inherit
+<uri> | none | inherit
+[ 'cue-before' || 'cue-after' ] | inherit
+[ [<uri> ,]* [ auto | crosshair | default | pointer | move | e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize | s-resize | w-resize | text | wait | help | progress ] ] | inherit
+ltr | rtl | inherit
+inline | block | list-item | inline-block | table | inline-table | table-row-group | table-header-group | table-footer-group | table-row | table-column-group | table-column | table-cell | table-caption | none | inherit
+<angle> | below | level | above | higher | lower | inherit
+show | hide | inherit
+left | right | none | inherit
+[[ <family-name> | <generic-family> ] [, <family-name>| <generic-family>]* ] | inherit
+<absolute-size> | <relative-size> | <length> | <percentage> | inherit
+normal | italic | oblique | inherit
+normal | small-caps | inherit
+normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | inherit
+[ [ 'font-style' || 'font-variant' || 'font-weight' ]? 'font-size' [ / 'line-height' ]? 'font-family' ] | caption | icon | menu | message-box | small-caption | status-bar | inherit
+<length> | <percentage> | auto | inherit
+<length> | <percentage> | auto | inherit
+normal | <length> | inherit
+normal | <number> | <length> | <percentage> | inherit
+<uri> | none | inherit
+inside | outside | inherit
+disc | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | lower-alpha | upper-alpha | none | inherit
+[ 'list-style-type' || 'list-style-position' || 'list-style-image' ] | inherit
+<margin-width> | inherit
+<margin-width> | inherit
+<margin-width>{1,4} | inherit
+<length> | <percentage> | none | inherit
+<length> | <percentage> | none | inherit
+<length> | <percentage> | inherit
+<length> | <percentage> | inherit
+<integer> | inherit
+<color> | invert | inherit
+<border-style> | inherit
+<border-width> | inherit
+[ 'outline-color' || 'outline-style' || 'outline-width' ] | inherit
+visible | hidden | scroll | auto | inherit
+<padding-width> | inherit
+<padding-width>{1,4} | inherit
+auto | always | avoid | left | right | inherit
+auto | always | avoid | left | right | inherit
+avoid | auto | inherit
+<time> | <percentage> | inherit
+<time> | <percentage> | inherit
+[ [<time> | <percentage>]{1,2} ] | inherit
+<number> | inherit
+<frequency> | x-low | low | medium | high | x-high | inherit
+<uri> [ mix || repeat ]? | auto | none | inherit
+static | relative | absolute | fixed | inherit
+[<string> <string>]+ | none | inherit
+<number> | inherit
+<length> | <percentage> | auto | inherit
+once | always | inherit
+digits | continuous | inherit
+code | none | inherit
+normal | none | spell-out | inherit
+<number> | x-slow | slow | medium | fast | x-fast | faster | slower | inherit
+<number> | inherit
+auto | fixed | inherit
+left | right | center | justify | inherit
+none | [ underline || overline || line-through || blink ] | inherit
+<length> | <percentage> | inherit
+capitalize | uppercase | lowercase | none | inherit
+<length> | <percentage> | auto | inherit
+normal | embed | bidi-override | inherit
+baseline | sub | super | top | text-top | middle | bottom | text-bottom | <percentage> | <length> | inherit
+visible | hidden | collapse | inherit
+[[<specific-voice> | <generic-voice> ],]* [<specific-voice> | <generic-voice> ] | inherit
+<number> | <percentage> | silent | x-soft | soft | medium | loud | x-loud | inherit
+normal | pre | nowrap | pre-wrap | pre-line | inherit
+<integer> | inherit
+<length> | <percentage> | auto | inherit
+normal | <length> | inherit
+auto | <integer> | inherit

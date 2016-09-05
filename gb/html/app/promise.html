@@ -1,0 +1,44 @@
+<script>
+function Person( name, age) {
+    
+    if( name) this.name = name;
+    if( age) this.age = age;
+}
+
+Person.prototype.getName = function() { return this.name;};
+Person.prototype.getAge = function() { return this.age;};
+Person.prototype.setName = function( name) { this.name = name;};
+Person.prototype.setAge = function( age) { this.age = age;};
+Person.prototype.name = "John Doe";
+
+var michael = new Person("Michael", 63);
+var noName = new Person();
+console.log( michael.name);
+console.log( noName.name);
+noName.setName("Sam Adams");
+console.log( noName.name);
+
+function Employee( name, age, id, salary) {
+    
+    console.log( name);
+    console.log( age);
+}
+
+var employee = new Employee();
+
+var falsy = [0, +0, -0, NaN, undefined, null];
+var truthy = [1, -1, Infinity, new Object(), new Array(), new Function(), new String()]
+
+for( var i = 0; i < falsy.length; i++) { console.log( Boolean(falsy[i]))};
+
+for( var i = 0; i < truthy.length; i++) { console.log( Boolean(truthy[i]))};
+
+
+console.log( typeof new Array());
+console.log( typeof new Boolean());
+console.log( typeof new Function());
+console.log( typeof new Number());
+console.log( typeof new Object());
+console.log( typeof new String());
+
+</script>

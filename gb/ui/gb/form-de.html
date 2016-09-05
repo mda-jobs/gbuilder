@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+  
+<head>
+
+<title>Glossary Builder</title>
+
+<meta charset="UTF-8" />
+  
+<script>
+
+var model = {
+    key: "request",
+    context: "npm",
+    domain: "software",
+    resource: "https://www.npmjs.com/package/request",
+    definition: "Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.",
+    usage: {
+        l1: "var request = require('request');",
+        l2: "request('http://www.google.com', function (error, response, body) {",
+        l3: "if (!error && response.statusCode == 200) {",
+        l4: "console.log(body) // Show the HTML for the Google homepage.",
+        l5: "}:",
+        l6: "})"
+    }
+};
+
+function scrape() {
+  
+  alert(forms.myForm.key.value);
+}
+</script>
+
+</head>
+
+<body>
+  <form id='myForm' method='get' action='this.scrape'>
+    <fieldset>
+      <legend>Glossary Entry</legend>
+      <p><label for='key'>Key:</label><br/><input id='key' type='text' /></p>
+      <p><label for='context'>Context:</label><br/><input id='context' type='text' /></p>
+      <p><label for='domain'>Domain:</label><br/><input id='domain' type='text' /></p>
+      <p><label for='resource'>Resource:</label><br/><input id='resource' type='text' /></p>
+      <p><label for='definition'>Definition:</label><br/><input id='definition' type='text' /></p>
+      <p style='position: relative; left: 5px; right: 5px; bottom: 5px;'><label for'usage'>Usage:</label><br/><textarea id='usage' style='width: 100%; resize: vertical;'></textarea></p>
+    </fieldset>
+      <p><input id='submit' type="submit" value="Submit"></p>
+  </form>
+</body>
+
+</html>

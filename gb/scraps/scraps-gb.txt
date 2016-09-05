@@ -1,0 +1,295 @@
+js-glossary = file:///E:/Javascript/Glossary/js_glossary.htm
+xml-glossary = file:///E:/XML/Glossary/xml_glossary.htm(W3C)/Glossary/xsd_glossary.htm
+xpath-glossary = file:///E:/XPath/Glossary/xpath_glossary.htm
+xquery-glossary = file:///E:/XQuery/Glossary/xquery_glossary.htm
+xsd-glossary = file:///E:/Schema/XML%20Schema%20
+
+<a href=''><img src='./images/external.png'/></a>
+
+<a href=''></a>
+
+<a href='#'></a>
+
+<a href='#'><code></code></a>
+
+<a href=''><code></code></a>
+
+<a href='#xs:'><code></code></a>
+
+<a href='#xs:'><code>xs:</code></a>
+
+<a href=''><img src='./images/external.png'/></a>
+
+<code></code>
+
+<a href='#'></a>
+
+    <dt id=''> <span class='unbold'></span><span id=''/><span class='unbold float-rt'></span></dt>
+    <dd>
+      <p>
+        
+      </p>
+    
+      <hr/>
+    
+      <footer>
+        <p class='source'>
+          <a href=''></a>&mdash;HTML Living Standard
+        </p>
+        <p class='cf'>
+          <a href='#'></a>
+        </p>
+        <p class='see'>
+          <a href='#'></a>
+        </p>
+        <p class='see-also'>
+          <a href='#'></a>
+        </p>
+        <p class='reference'>
+          <a href=''></a>&mdash;
+        </p>
+        <div class='reference'>
+          <ul>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+          </ul>
+        </div>
+      </footer>
+    </dd>
+
+    <dt id=''> <span class='unbold'></span><span id=''/><span class='unbold float-rt'>visual formatting model</span></dt>
+    <dd>
+      <p>
+        
+      </p>
+    
+      <hr/>
+    
+      <footer>
+        <p class='source'>
+          <a href=''></a>&mdash;CSS 2.1 Specification
+        </p>
+        <p class='cf'>
+          <a href='#'></a>
+        </p>
+        <p class='see'>
+          <a href='#'></a>
+        </p>
+        <p class='see-also'>
+          <a href='#'></a>
+        </p>
+        <p class='reference'>
+          <a href=''></a>&mdash;
+        </p>
+        <div class='reference'>
+          <ul>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+          </ul>
+        </div>
+      </footer>
+    </dd>
+
+    <dt id=''> <span class='unbold'></span><span id=''/><span class='unbold float-rt'></span></dt>
+    <dd>
+      <p>
+        
+      </p>
+    
+      <hr/>
+    
+      <footer>
+        <p class='source'>
+          <a href=''></a>&mdash;
+        </p>
+        <p class='cf'>
+          <a href='#'></a>
+        </p>
+        <p class='see'>
+          <a href='#'></a>
+        </p>
+        <p class='see-also'>
+          <a href='#'></a>
+        </p>
+        <p class='reference'>
+          <a href=''></a>&mdash;
+        </p>
+        <div class='reference'>
+          <ul>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+          </ul>
+        </div>
+      </footer>
+    </dd>
+    
+
+        <div class='sources'>
+          <ul>
+            <li><a href=''></a>&mdash;</li>
+            <li><a href=''></a>&mdash;</li>
+          </ul>
+        </div>    
+
+
+
+    <dt id=''> <span class='unbold'></span><span id=''/></dt>
+    <dd>
+      <p>
+        See <a href=''></a>.
+      </p>
+
+      <hr/><br/>
+ 
+    </dd>
+
+    <dt id=''> <span class='unbold'>  disambiguous</span><span id=''/></dt>
+    <dd>
+      <p>
+        The term <i></i> may refer to:</p>
+      <ul>
+	      <li><a href='#'></a></li>
+	      <li><a href='#'></a></li>
+        <li><a href='#'></a></li>
+        <li><a href='#'></a></li>
+      </ul>
+
+      <hr/>
+
+    </dd>
+
+
+<a href='ftp://91.193.236.10/pub/docs/linux-support/programming/JavaScript/%5BO%60Reilly%5D%20-%20JavaScript.%20The%20Definitive%20Guide,%206th%20ed.%20-%20%5BFlanagan%5D.pdf'></a>&mdash;JavaScript The Definitive Guide, 6ed
+<a href='http://speakingjs.com/es5/'></a>&mdash;Speaking JavaScript by Dr. Axel Rauschmayer
+<a href='file:///E:/Javascript/eBook/Secrets%20of%20the%20JavaScript%20Ninja%20Professional.pdf'></a>&mdash;Secrets of the JavaScript Ninja'>Secrets of the JavaScript Ninja; p.
+<a href='http://arquivos.portaldaindustria.com.br/app/cni_autonomia_2/2013/07/14/4/20130714204420861156i.pdf'>Pro JavaScript Techniques</a>
+<a href='http://eloquentjavascript.net/Eloquent_JavaScript.pdf'>Eloquent JavaScript</a>&mdash;No Starch Press
+<a href='http://www.reedbushey.com/67Professional%20Jquery.pdf'>Professional JQuery</a>&mdash;Wrox
+
+      <div class=''>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <div class=''>
+        <ul>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+          <li><a href=''></a></li>
+        </ul>
+      </div>
+
+      <div class=''>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+      <div class=''>
+        <ul>
+          <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
+        </ul>
+      </div>
+
+<!-- Related documents :
+
+
+-->
+
+
+
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th></th>
+
+            <th></th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td></td>
+
+            <td></td></tr>
+
+          <tr>
+
+            <td></td>
+
+            <td></td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+
+
+        <li>
+<pre class='example'>
+
+</pre>
+
+        <li>
+<pre class='example'>
+
+</pre> 
+          <p>
+            
+          </p></li>
+
+        <ul>
+          <li><a href='#'><code></code></a></li>
+          <li><a href='#'><code></code></a></li>
+          <li><a href='#'><code></code></a></li>
+          <li><a href='#'><code></code></a></li>
+        </ul>
+
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        
+
+            implementation {
+                
+                JavaScript {
+            
+                    API: {
+                        
+                        syntax: "var xpathResult = document.evaluate( xpath, contextNode, namespaceResolver, resultType, result);"]
+                        
+                        parameters: [
+                            
+                            ["contextNode", ""],
+                            ["namespaceResolver", ""],
+                            ["result", ""],
+                            ["resultType", ""],
+                            ["xpath", ""],
+                            ["xpathResult", ""]
+                        ], 
+                        
+                        return type": "XPathResult"
+                    }
+                }
+            },
